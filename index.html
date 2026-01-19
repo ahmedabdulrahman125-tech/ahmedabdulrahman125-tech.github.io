@@ -5,9 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
@@ -34,21 +32,21 @@
         }
 
         /* =====================
-           SIDEBAR STRUCTURE
+           SIDEBAR (FIXED MODEL)
         ===================== */
 
         #header {
-            width: 320px;
+            width: 300px;
             background: var(--sidebar-bg);
             border-right: 1px solid rgba(255,255,255,0.06);
         }
 
         #main {
-            margin-left: 320px;
+            margin-left: 300px;
             background: var(--main-bg);
         }
 
-        /* Remove HTML5 UP chrome */
+        /* Remove HTML5 UP image chrome */
         #logo .image {
             background: none !important;
             border: none !important;
@@ -57,44 +55,39 @@
         }
 
         /* =====================
-           IDENTITY BLOCK
+           IDENTITY (STACKED)
         ===================== */
 
         #logo {
-            padding: 2.2em 1.6em 1.6em 1.6em;
+            padding: 2.2em 1.4em 1.6em 1.4em;
+            text-align: center;
         }
 
         .identity {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 18px;
         }
 
         .identity img {
-            width: 110px;
-            height: 110px;
+            width: 108px;
+            height: 108px;
             border-radius: 50%;
             object-fit: cover;
-            flex-shrink: 0;
+            margin-bottom: 0.9em;
         }
 
-        .identity-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .identity-text h1 {
+        .identity h1 {
             margin: 0;
-            font-size: 1.25rem;
-            line-height: 1.15;
+            font-size: 1.15rem;
+            line-height: 1.25;
             color: var(--sidebar-text);
         }
 
-        .identity-text p {
+        .identity p {
             margin-top: 0.4em;
-            font-size: 0.78rem;
-            line-height: 1.4;
+            font-size: 0.75rem;
+            line-height: 1.45;
             color: var(--sidebar-muted);
         }
 
@@ -103,11 +96,11 @@
         ===================== */
 
         #nav {
-            margin-top: 2.5em;
+            margin-top: 2.6em;
         }
 
         #nav ul {
-            padding-left: 0;
+            text-align: center;
         }
 
         #nav ul li {
@@ -117,9 +110,7 @@
         #nav ul li a {
             font-size: 0.95rem;
             color: var(--sidebar-text);
-            text-align: left;
-            padding-left: 1.6em;
-            display: block;
+            display: inline-block;
         }
 
         /* =====================
@@ -129,19 +120,19 @@
         #top {
             background: linear-gradient(135deg, #0E2342 0%, #09182F 100%);
             color: var(--text-light);
-            padding: 4em 0 3.2em 0 !important;
+            padding: 4em 0 3.4em 0 !important;
             text-align: center;
         }
 
         .hero-name {
             font-size: 3.1rem;
-            margin-bottom: 0.35em;
+            margin-bottom: 0.4em;
         }
 
         .hero-subtitle {
             font-size: 1.05rem;
             color: #dbe4ff;
-            margin-bottom: 0.25em;
+            margin-bottom: 0.3em;
         }
 
         .hero-credentials {
@@ -154,11 +145,11 @@
             border: none;
             font-size: 0.9rem;
             padding: 0.75em 1.8em;
-            margin-top: 1.6em;
+            margin-top: 1.8em;
         }
 
         /* =====================
-           CONTENT SECTIONS
+           SECTIONS
         ===================== */
 
         #about, #portfolio, #skills, #contact {
@@ -173,27 +164,6 @@
             font-size: 0.95rem;
             text-align: center;
         }
-
-        /* =====================
-           PROJECTS
-        ===================== */
-
-        #portfolio .item {
-            background: white;
-            border-radius: 14px;
-            padding-bottom: 8px;
-            box-shadow: 0px 6px 18px rgba(0,0,0,0.08);
-            transition: transform 0.2s ease;
-        }
-
-        #portfolio .item:hover {
-            transform: translateY(-6px);
-        }
-
-        #portfolio .item header h3 {
-            font-size: 1rem;
-            margin: 0.8em 0 0.6em 0;
-        }
     </style>
 </head>
 
@@ -206,12 +176,9 @@
         <!-- Identity -->
         <div id="logo">
             <div class="identity">
-                <img src="images/headshot.png" alt="Ahmed Abdulrahman headshot" />
-
-                <div class="identity-text">
-                    <h1>Ahmed Abdulrahman</h1>
-                    <p>Finance • Data Analytics • CFA Level I</p>
-                </div>
+                <img src="images/headshot.jpg" alt="Ahmed Abdulrahman headshot">
+                <h1>Ahmed Abdulrahman</h1>
+                <p>Finance • Data Analytics • CFA Level I</p>
             </div>
         </div>
 
@@ -264,50 +231,4 @@
             CFA Level I passed; Level II candidate.
         </p>
     </div>
-</section>
-
-<section id="portfolio">
-    <div class="container">
-        <header><h2>Projects</h2></header>
-
-        <div class="row">
-            <div class="col-4 col-12-mobile">
-                <article class="item"><header><h3>Portfolio Analytics Dashboard</h3></header></article>
-                <article class="item"><header><h3>Financial Modeling (DCF / LBO)</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-                <article class="item"><header><h3>Trading Strategy Backtest</h3></header></article>
-                <article class="item"><header><h3>Macro Market Analysis</h3></header></article>
-            </div>
-            <div class="col-4 col-12-mobile">
-                <article class="item"><header><h3>Risk & Performance Attribution</h3></header></article>
-                <article class="item"><header><h3>Econometrics Research</h3></header></article>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="skills">
-    <div class="container">
-        <header><h2>Skills</h2></header>
-        <p style="text-align:center;">
-            <strong>Finance:</strong> DCF, LBO, M&A, Portfolio Analytics<br>
-            <strong>Programming:</strong> Python, SQL, Power BI, Tableau
-        </p>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="container">
-        <header><h2>Contact</h2></header>
-        <p style="text-align:center;">Open to full-time opportunities and professional discussions.</p>
-    </div>
-</section>
-
-</div>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/main.js"></script>
-
-</body>
-</html>
+</
