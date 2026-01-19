@@ -12,14 +12,15 @@
 
     <style>
         :root {
+            --sidebar-navy: #0B1E36;
+            --main-navy: #0E2342;
             --royal-blue: #2F6BFF;
-            --navy: #0E2342;
             --text-light: #F0F4FA;
             --section-bg: #F7F9FB;
         }
 
         body {
-            background: var(--navy);
+            background: var(--main-navy);
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
@@ -33,15 +34,17 @@
         ===================== */
 
         #header {
-            width: 280px;              /* slightly wider */
-            background: var(--navy);
+            width: 290px;
+            background: var(--sidebar-navy);
+            border-right: 1px solid rgba(255,255,255,0.06);
         }
 
         #main {
-            margin-left: 280px;
+            margin-left: 290px;
+            background: var(--main-navy);
         }
 
-        /* Kill HTML5 UP image box */
+        /* Remove HTML5 UP image box */
         #logo .image {
             background: none !important;
             border: none !important;
@@ -49,45 +52,47 @@
             padding: 0 !important;
         }
 
-        /* Logo container */
+        /* Logo block */
         #logo {
-            padding: 1.2em 1em 0.8em 1em;
+            padding: 1.3em 1.1em 1em 1.1em;
         }
 
         .logo-flex {
             display: flex;
-            align-items: flex-start;   /* IMPORTANT */
+            align-items: flex-start;
             gap: 14px;
         }
 
         /* Headshot */
         .avatar-left img {
-            width: 64px;               /* BIGGER IMAGE */
-            height: 64px;
+            width: 68px;
+            height: 68px;
             border-radius: 50%;
             object-fit: cover;
-            display: block;
             flex-shrink: 0;
+            display: block;
         }
 
-        /* Text block */
+        /* Text next to headshot */
         .logo-text {
-            max-width: 170px;          /* prevents overflow */
+            max-width: 210px;
         }
 
         .logo-text h1 {
             margin: 0;
             font-size: 1.05rem;
-            line-height: 1.15;
+            line-height: 1.25;
             color: var(--royal-blue);
-            white-space: normal;       /* ALLOW WRAP */
-            word-break: break-word;
+
+            white-space: normal;
+            word-break: normal;
+            overflow-wrap: normal;
         }
 
         .logo-text p {
-            margin-top: 4px;
+            margin-top: 6px;
             font-size: 0.72rem;
-            line-height: 1.3;
+            line-height: 1.35;
             color: #cfd9f1;
         }
 
@@ -98,6 +103,7 @@
         #nav ul li a {
             font-size: 0.9rem;
             padding: 0.45em 0;
+            color: #e6edff;
         }
 
         /* =====================
@@ -105,9 +111,9 @@
         ===================== */
 
         #top {
-            background: var(--navy);
+            background: var(--main-navy);
             color: var(--text-light);
-            padding: 3em 0 2.5em 0 !important;
+            padding: 3em 0 2.4em 0 !important;
         }
 
         .hero-name {
@@ -175,7 +181,7 @@
 
 <body class="is-preload">
 
-<!-- Header -->
+<!-- Sidebar -->
 <div id="header">
     <div class="top">
 
