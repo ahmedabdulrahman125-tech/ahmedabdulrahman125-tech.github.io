@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/main.css" />
 
@@ -28,20 +28,20 @@
             letter-spacing: -0.3px;
         }
 
-        /* =========================
-           SIDEBAR (LEFT)
-        ========================= */
+        /* =====================
+           SIDEBAR
+        ===================== */
 
         #header {
-            width: 260px;
+            width: 280px;              /* slightly wider */
             background: var(--navy);
         }
 
         #main {
-            margin-left: 260px;
+            margin-left: 280px;
         }
 
-        /* Remove HTML5 UP image box */
+        /* Kill HTML5 UP image box */
         #logo .image {
             background: none !important;
             border: none !important;
@@ -49,45 +49,60 @@
             padding: 0 !important;
         }
 
-        /* Logo layout */
-        .logo-flex {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        /* Logo container */
+        #logo {
+            padding: 1.2em 1em 0.8em 1em;
         }
 
+        .logo-flex {
+            display: flex;
+            align-items: flex-start;   /* IMPORTANT */
+            gap: 14px;
+        }
+
+        /* Headshot */
         .avatar-left img {
-            width: 48px;
-            height: 48px;
+            width: 64px;               /* BIGGER IMAGE */
+            height: 64px;
             border-radius: 50%;
             object-fit: cover;
             display: block;
+            flex-shrink: 0;
+        }
+
+        /* Text block */
+        .logo-text {
+            max-width: 170px;          /* prevents overflow */
         }
 
         .logo-text h1 {
             margin: 0;
             font-size: 1.05rem;
-            line-height: 1.1;
-            white-space: nowrap;
+            line-height: 1.15;
             color: var(--royal-blue);
+            white-space: normal;       /* ALLOW WRAP */
+            word-break: break-word;
         }
 
         .logo-text p {
-            margin: 2px 0 0 0;
-            font-size: 0.7rem;
-            line-height: 1.2;
+            margin-top: 4px;
+            font-size: 0.72rem;
+            line-height: 1.3;
             color: #cfd9f1;
         }
 
-        /* Nav */
+        /* =====================
+           NAV
+        ===================== */
+
         #nav ul li a {
             font-size: 0.9rem;
-            padding: 0.4em 0;
+            padding: 0.45em 0;
         }
 
-        /* =========================
-           HERO / INTRO
-        ========================= */
+        /* =====================
+           HERO
+        ===================== */
 
         #top {
             background: var(--navy);
@@ -119,9 +134,9 @@
             margin-top: 1.1em;
         }
 
-        /* =========================
+        /* =====================
            SECTIONS
-        ========================= */
+        ===================== */
 
         #about, #portfolio, #skills, #contact {
             background: var(--section-bg);
@@ -135,9 +150,9 @@
             font-size: 0.95rem;
         }
 
-        /* =========================
-           PROJECT CARDS
-        ========================= */
+        /* =====================
+           PROJECTS
+        ===================== */
 
         #portfolio .item {
             background: white;
@@ -165,14 +180,16 @@
     <div class="top">
 
         <!-- Logo -->
-        <div id="logo" class="logo-flex">
-            <span class="image avatar48 avatar-left">
-                <img src="images/headshot.png" alt="Ahmed Abdulrahman headshot" />
-            </span>
+        <div id="logo">
+            <div class="logo-flex">
+                <span class="image avatar48 avatar-left">
+                    <img src="images/headshot.jpg" alt="Ahmed Abdulrahman headshot" />
+                </span>
 
-            <div class="logo-text">
-                <h1>Ahmed Abdulrahman</h1>
-                <p>Finance • Data Analytics • CFA Level I</p>
+                <div class="logo-text">
+                    <h1>Ahmed Abdulrahman</h1>
+                    <p>Finance • Data Analytics • CFA Level I</p>
+                </div>
             </div>
         </div>
 
@@ -193,7 +210,6 @@
 <!-- Main -->
 <div id="main">
 
-<!-- Intro -->
 <section id="top">
     <div class="container">
         <header>
@@ -212,7 +228,6 @@
     </div>
 </section>
 
-<!-- About -->
 <section id="about">
     <div class="container about-tight">
         <header><h2>About Me</h2></header>
@@ -224,18 +239,15 @@
         </p>
 
         <p>
-            My work combines financial modeling (DCF, LBO, M&A) with analytics and automation using
-            Python, SQL, and BI tools. I am particularly interested in data-driven roles that support
-            investment decision-making. I have passed CFA Level I and am a Level II candidate.
+            My work combines financial modeling with analytics and automation using Python, SQL,
+            and BI tools. I have passed CFA Level I and am a Level II candidate.
         </p>
     </div>
 </section>
 
-<!-- Projects -->
 <section id="portfolio">
     <div class="container">
         <header><h2>Projects</h2></header>
-        <p>Selected finance and analytics work.</p>
 
         <div class="row">
             <div class="col-4 col-12-mobile">
@@ -254,19 +266,16 @@
     </div>
 </section>
 
-<!-- Skills -->
 <section id="skills">
     <div class="container">
         <header><h2>Skills</h2></header>
         <p>
-            <strong>Finance:</strong> DCF, LBO, M&A, Portfolio Analytics, Risk Models<br>
-            <strong>Programming:</strong> Python, SQL, Power BI, Tableau<br>
-            <strong>Tools:</strong> Bloomberg, Morningstar, Excel (Advanced), Git
+            <strong>Finance:</strong> DCF, LBO, M&A, Portfolio Analytics<br>
+            <strong>Programming:</strong> Python, SQL, Power BI, Tableau
         </p>
     </div>
 </section>
 
-<!-- Contact -->
 <section id="contact">
     <div class="container">
         <header><h2>Contact</h2></header>
