@@ -12,19 +12,19 @@
 
     <style>
         :root {
-            --sidebar-bg: #F2F4F7;        /* light gray */
-            --sidebar-text: #1F2937;      /* dark gray */
+            --sidebar-bg: #F2F4F7;
+            --sidebar-text: #1F2937;
             --sidebar-muted: #6B7280;
 
-            --main-navy: #0E2342;
-            --royal-blue: #2F6BFF;
+            --main-bg: #0E2342;
+            --accent: #2F6BFF;
 
-            --text-light: #F0F4FA;
             --section-bg: #F7F9FB;
+            --text-light: #F0F4FA;
         }
 
         body {
-            background: var(--main-navy);
+            background: var(--main-bg);
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
@@ -45,10 +45,10 @@
 
         #main {
             margin-left: 300px;
-            background: var(--main-navy);
+            background: var(--main-bg);
         }
 
-        /* Remove HTML5 UP image box */
+        /* Remove HTML5 UP image chrome */
         #logo .image {
             background: none !important;
             border: none !important;
@@ -58,7 +58,7 @@
 
         /* Logo block */
         #logo {
-            padding: 1.6em 1.4em 1.2em 1.4em;
+            padding: 1.8em 1.2em 1.4em 1.2em;
             text-align: center;
         }
 
@@ -66,43 +66,42 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 14px;
         }
 
         /* Headshot */
         .avatar-left img {
-            width: 88px;        /* BIGGER */
-            height: 88px;
+            width: 96px;
+            height: 96px;
             border-radius: 50%;
             object-fit: cover;
             display: block;
+            margin-bottom: 0.75em;
         }
 
-        /* Text */
+        /* Name */
         .logo-text h1 {
             margin: 0;
             font-size: 1.15rem;
             line-height: 1.25;
             color: var(--sidebar-text);
-
-            white-space: normal;
-            word-break: normal;
-            overflow-wrap: normal;
+            text-align: center;
         }
 
+        /* Subtitle */
         .logo-text p {
-            margin-top: 6px;
+            margin-top: 0.35em;
             font-size: 0.75rem;
-            line-height: 1.35;
+            line-height: 1.4;
             color: var(--sidebar-muted);
+            text-align: center;
         }
 
         /* =====================
-           NAV (CENTERED)
+           NAV
         ===================== */
 
         #nav {
-            margin-top: 1.8em;
+            margin-top: 2em;
         }
 
         #nav ul {
@@ -110,7 +109,7 @@
         }
 
         #nav ul li {
-            margin: 0.6em 0;
+            margin: 0.7em 0;
         }
 
         #nav ul li a {
@@ -124,7 +123,7 @@
         ===================== */
 
         #top {
-            background: var(--main-navy);
+            background: var(--main-bg);
             color: var(--text-light);
             padding: 3em 0 2.4em 0 !important;
         }
@@ -146,7 +145,7 @@
         }
 
         #top .button {
-            background: var(--royal-blue);
+            background: var(--accent);
             border: none;
             font-size: 0.85rem;
             padding: 0.6em 1.4em;
@@ -202,7 +201,7 @@
         <div id="logo">
             <div class="logo-flex">
                 <span class="image avatar48 avatar-left">
-                    <img src="images/headshot.png" alt="Ahmed Abdulrahman headshot" />
+                    <img src="images/headshot.jpg" alt="Ahmed Abdulrahman headshot" />
                 </span>
 
                 <div class="logo-text">
@@ -252,14 +251,13 @@
         <header><h2>About Me</h2></header>
 
         <p>
-            I am a Rotman Commerce graduate specializing in Finance, Economics, and Data Analytics,
-            with experience supporting portfolio strategy, asset allocation, and investment analysis
-            across public markets.
+            Rotman Commerce graduate specializing in Finance, Economics, and Data Analytics with experience
+            supporting portfolio strategy, asset allocation, and investment analysis across public markets.
         </p>
 
         <p>
-            My work combines financial modeling with analytics and automation using Python, SQL,
-            and BI tools. I have passed CFA Level I and am a Level II candidate.
+            Focused on combining financial modeling with analytics and automation using Python, SQL, and BI tools.
+            CFA Level I passed; Level II candidate.
         </p>
     </div>
 </section>
@@ -298,7 +296,7 @@
 <section id="contact">
     <div class="container">
         <header><h2>Contact</h2></header>
-        <p>Open to full-time opportunities and conversations.</p>
+        <p>Open to full-time opportunities and professional discussions.</p>
     </div>
 </section>
 
