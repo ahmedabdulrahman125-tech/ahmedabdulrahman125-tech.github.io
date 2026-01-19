@@ -1,3 +1,88 @@
+/* ------------------------------
+   CUSTOM FINANCE THEME OVERRIDE
+   Royal Blue + Steel Grey Theme
+   ------------------------------*/
+
+/* Background colors */
+body {
+    background-color: #F2F4F7;
+    color: #2E3A45;
+}
+
+#header {
+    background-color: #0E1F3A !important;
+}
+
+#header .top {
+    background-color: #0E1F3A !important;
+}
+
+#header .bottom {
+    background-color: #0E1F3A !important;
+}
+
+/* Section backgrounds */
+section.one {
+    background: #1A3D7C !important; /* Royal Blue hero */
+    color: white !important;
+}
+
+section.two, section.three, section.four {
+    background: #FFFFFF !important;
+    color: #2E3A45 !important;
+    border-top: 1px solid #D1D5DB;
+}
+
+/* Portfolio cards */
+.item header h3 {
+    color: #1A3D7C !important;
+}
+
+.item p {
+    color: #2E3A45 !important;
+}
+
+/* Buttons */
+.button {
+    background-color: #2563EB !important;
+    color: white !important;
+    border-radius: 4px;
+    border: none !important;
+}
+
+.button:hover {
+    background-color: #1E40AF !important;
+}
+
+/* Navigation links */
+#nav ul li a {
+    color: #FFFFFF !important;
+}
+
+#nav ul li a:hover {
+    color: #AECBFA !important;
+}
+
+/* Icons */
+ul.icons li a {
+    color: #FFFFFF !important;
+}
+
+ul.icons li a:hover {
+    color: #2563EB !important;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    color: #1A3D7C !important;
+}
+
+/* About Me image border (optional, looks clean) */
+.image.featured img {
+    border-radius: 6px;
+    border: 2px solid #1A3D7C;
+}
+
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
 
