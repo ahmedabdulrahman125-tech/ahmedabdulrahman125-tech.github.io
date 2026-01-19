@@ -12,9 +12,13 @@
 
     <style>
         :root {
-            --sidebar-navy: #0B1E36;
+            --sidebar-bg: #F2F4F7;        /* light gray */
+            --sidebar-text: #1F2937;      /* dark gray */
+            --sidebar-muted: #6B7280;
+
             --main-navy: #0E2342;
             --royal-blue: #2F6BFF;
+
             --text-light: #F0F4FA;
             --section-bg: #F7F9FB;
         }
@@ -35,12 +39,12 @@
 
         #header {
             width: 300px;
-            background: var(--sidebar-navy);
-            border-right: 1px solid rgba(255,255,255,0.06);
+            background: var(--sidebar-bg);
+            border-right: 1px solid #E5E7EB;
         }
 
         #main {
-            margin-left: 290px;
+            margin-left: 300px;
             background: var(--main-navy);
         }
 
@@ -54,35 +58,32 @@
 
         /* Logo block */
         #logo {
-            padding: 1.3em 1.1em 1em 1.1em;
+            padding: 1.6em 1.4em 1.2em 1.4em;
+            text-align: center;
         }
 
         .logo-flex {
             display: flex;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             gap: 14px;
         }
 
         /* Headshot */
         .avatar-left img {
-            width: 68px;
-            height: 68px;
+            width: 88px;        /* BIGGER */
+            height: 88px;
             border-radius: 50%;
             object-fit: cover;
-            flex-shrink: 0;
             display: block;
         }
 
-        /* Text next to headshot */
-        .logo-text {
-            max-width: 210px;
-        }
-
+        /* Text */
         .logo-text h1 {
             margin: 0;
-            font-size: 1.05rem;
+            font-size: 1.15rem;
             line-height: 1.25;
-            color: var(--royal-blue);
+            color: var(--sidebar-text);
 
             white-space: normal;
             word-break: normal;
@@ -91,19 +92,31 @@
 
         .logo-text p {
             margin-top: 6px;
-            font-size: 0.72rem;
+            font-size: 0.75rem;
             line-height: 1.35;
-            color: #cfd9f1;
+            color: var(--sidebar-muted);
         }
 
         /* =====================
-           NAV
+           NAV (CENTERED)
         ===================== */
 
+        #nav {
+            margin-top: 1.8em;
+        }
+
+        #nav ul {
+            text-align: center;
+        }
+
+        #nav ul li {
+            margin: 0.6em 0;
+        }
+
         #nav ul li a {
-            font-size: 0.9rem;
-            padding: 0.45em 0;
-            color: #e6edff;
+            font-size: 0.95rem;
+            color: var(--sidebar-text);
+            display: inline-block;
         }
 
         /* =====================
@@ -296,4 +309,3 @@
 
 </body>
 </html>
-
