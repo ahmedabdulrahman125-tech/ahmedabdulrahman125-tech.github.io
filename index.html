@@ -1,205 +1,249 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Ahmed Abdulrahman | Finance & Data Analytics</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Ahmed Abdulrahman | Finance & Data</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
 
-		<!-- Header -->
-		<div id="header">
+    <style>
+        /* Modern Royal Color Scheme */
+        :root {
+            --royal-blue: #2F6BFF;
+            --navy: #102A54;
+            --text-light: #F0F4FA;
+            --section-bg: #F7F9FB;
+            --steel-gray: #E5E9F0;
+        }
 
-			<div class="top">
+        body {
+            background-color: var(--navy);
+        }
 
-				<!-- Logo -->
-				<div id="logo">
-					<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="title">Ahmed Abdulrahman</h1>
-					<p>Finance • Economics • Data Analytics • Data Science<br/>CFA Level I</p>
-				</div>
+        /* Header */
+        #header {
+            background: var(--navy);
+        }
 
-				<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li><a href="#top" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
-						<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Projects</span></a></li>
-						<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-						<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-					</ul>
-				</nav>
+        #header #logo h1 {
+            color: var(--royal-blue);
+        }
 
-			</div>
+        #header p {
+            color: var(--text-light);
+        }
 
-			<div class="bottom">
-				<!-- Social Icons -->
-				<ul class="icons">
-					<li><a href="https://linkedin.com" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					<li><a href="https://github.com" class="icon brands fa-github"><span class="label">Github</span></a></li>
-					<li><a href="mailto:your@email.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-			</div>
+        /* Hero Section */
+        #top {
+            background: var(--navy);
+            color: var(--text-light);
+        }
 
-		</div>
+        #top h2 strong {
+            color: var(--royal-blue);
+        }
 
-		<!-- Main -->
-		<div id="main">
+        .button.scrolly {
+            background: var(--royal-blue);
+            border: none;
+            color: white !important;
+        }
 
-			<!-- Intro -->
-			<section id="top" class="one dark cover">
-				<div class="container">
+        /* Section Backgrounds */
+        #portfolio, #about, #contact {
+            background: var(--section-bg);
+            color: #111;
+        }
 
-					<header>
-						<h2 class="alt">Hi, I'm <strong>Ahmed Abdulrahman</strong>.</h2>
-						<p>
-							Rotman Commerce | Finance • Economics • Data Analytics • Data Science<br/>
-							CFA Level I | Focused on Capital Markets, Investment Research & Financial Modelling
-						</p>
-					</header>
+        /* Project Cards */
+        #portfolio .item {
+            background: white;
+            border-radius: 12px;
+            padding-bottom: 10px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.07);
+            transition: transform 0.2s ease;
+        }
 
-					<footer>
-						<a href="#portfolio" class="button scrolly">View My Projects</a>
-					</footer>
+        #portfolio .item:hover {
+            transform: translateY(-6px);
+        }
 
-				</div>
-			</section>
+        /* Titles */
+        h2 {
+            color: var(--navy);
+        }
 
-			<!-- Portfolio -->
-			<section id="portfolio" class="two">
-				<div class="container">
+        /* Contact Form Styling */
+        input, textarea {
+            border: 1px solid var(--steel-gray);
+            border-radius: 6px;
+        }
+    </style>
+</head>
 
-					<header>
-						<h2>Projects</h2>
-					</header>
+<body class="is-preload">
 
-					<p>Highlights of my analytical, technical, and finance-focused work.</p>
+<!-- Header -->
+<div id="header">
+    <div class="top">
 
-					<div class="row">
-						<div class="col-4 col-12-mobile">
-							<article class="item">
-								<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-								<header>
-									<h3>Equity Valuation Model</h3>
-									<p>DCF, Comps, Sensitivity Analysis. Automated using Python & Excel.</p>
-								</header>
-							</article>
+        <!-- Logo -->
+        <div id="logo">
+            <span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+            <h1 id="title">Ahmed Abdulrahman</h1>
+            <p>BCom: Finance • Economics • Data Analytics • Data Science | CFA Level I</p>
+        </div>
 
-							<article class="item">
-								<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-								<header>
-									<h3>Algorithmic Market Dashboard</h3>
-									<p>Live sector rotation, yield curves, and macro indicators dashboard.</p>
-								</header>
-							</article>
-						</div>
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+                <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Projects</span></a></li>
+                <li><a href="#skills" id="skills-link"><span class="icon solid fa-code">Skills</span></a></li>
+                <li><a href="#about" id="about-link"><span class="icon solid fa-user">About</span></a></li>
+                <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+            </ul>
+        </nav>
 
-						<div class="col-4 col-12-mobile">
-							<article class="item">
-								<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-								<header>
-									<h3>Machine Learning Credit Risk Model</h3>
-									<p>Random forest prediction model with feature engineering & evaluation.</p>
-								</header>
-							</article>
+    </div>
 
-							<article class="item">
-								<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-								<header>
-									<h3>SQL Financial Data Pipeline</h3>
-									<p>End-to-end ETL pipeline for storing & querying financial datasets.</p>
-								</header>
-							</article>
-						</div>
+    <div class="bottom">
+        <ul class="icons">
+            <li><a href="https://github.com/ahmedabdulrahman125-tech" class="icon brands fa-github"><span class="label">Github</span></a></li>
+            <li><a href="mailto:your-email@example.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+    </div>
+</div>
 
-						<div class="col-4 col-12-mobile">
-							<article class="item">
-								<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-								<header>
-									<h3>Portfolio Optimization Tool</h3>
-									<p>Modern Portfolio Theory, Sharpe maximization, efficient frontier.</p>
-								</header>
-							</article>
+<!-- Main -->
+<div id="main">
 
-							<article class="item">
-								<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-								<header>
-									<h3>Time-Series Forecasting</h3>
-									<p>ARIMA and LSTM models forecasting macroeconomic indicators.</p>
-								</header>
-							</article>
-						</div>
-					</div>
+    <!-- Intro -->
+    <section id="top" class="one dark cover">
+        <div class="container">
+            <header>
+                <h2 class="alt">Hi, I'm <strong>Ahmed Abdulrahman</strong> — Finance & Data Analytics</h2>
+                <p>Rotman Commerce | Specializing in Capital Markets, Modeling, and Machine Learning<br>
+                Passionate about building data-driven financial insights and automated analytics tools.</p>
+            </header>
+            <footer>
+                <a href="#portfolio" class="button scrolly">Explore My Projects</a>
+            </footer>
+        </div>
+    </section>
 
-				</div>
-			</section>
+    <!-- Projects -->
+    <section id="portfolio" class="two">
+        <div class="container">
+            <header>
+                <h2>Projects</h2>
+            </header>
 
-			<!-- About Me -->
-			<section id="about" class="three">
-				<div class="container">
+            <p>A curated selection of my work across Finance, Economics, Data Science, and Analytics.</p>
 
-					<header>
-						<h2>About Me</h2>
-					</header>
+            <div class="row">
 
-					<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+                <!-- Project Template Example -->
+                <div class="col-4 col-12-mobile">
+                    <article class="item">
+                        <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+                        <header><h3>Financial Modeling Project</h3></header>
+                    </article>
 
-					<p>
-						I am a Rotman Commerce student specializing in Finance, Economics, Data Analytics, and Data Science.
-						My interests lie in capital markets, quantitative research, portfolio construction, and financial modelling.
+                    <article class="item">
+                        <a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+                        <header><h3>Market Microstructure Analysis</h3></header>
+                    </article>
+                </div>
 
-						I have experience in Python (Pandas, NumPy, Scikit-Learn), SQL, and advanced Excel, and I enjoy building tools that improve
-						decision-making for investment teams. I’m currently progressing through the CFA pathway and constantly expanding my
-						technical and analytical skill set.
-					</p>
+                <div class="col-4 col-12-mobile">
+                    <article class="item">
+                        <a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
+                        <header><h3>Machine Learning Forecasting</h3></header>
+                    </article>
 
-				</div>
-			</section>
+                    <article class="item">
+                        <a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
+                        <header><h3>Trading Strategy Backtest</h3></header>
+                    </article>
+                </div>
 
-			<!-- Contact -->
-			<section id="contact" class="four">
-				<div class="container">
+                <div class="col-4 col-12-mobile">
+                    <article class="item">
+                        <a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
+                        <header><h3>Econometrics Research</h3></header>
+                    </article>
 
-					<header>
-						<h2>Contact</h2>
-					</header>
+                    <article class="item">
+                        <a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+                        <header><h3>Risk Analytics Dashboard</h3></header>
+                    </article>
+                </div>
 
-					<p>If you'd like to connect for opportunities, collaborations, or discussions, feel free to reach out.</p>
+            </div>
+        </div>
+    </section>
 
-					<form method="post" action="#">
-						<div class="row">
-							<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-							<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-							<div class="col-12">
-								<textarea name="message" placeholder="Message"></textarea>
-							</div>
-							<div class="col-12">
-								<input type="submit" value="Send Message" />
-							</div>
-						</div>
-					</form>
+    <!-- Skills -->
+    <section id="skills" class="three">
+        <div class="container">
+            <header><h2>Skills</h2></header>
 
-				</div>
-			</section>
+            <p><strong>Financial:</strong> DCF, LBO, M&A Modeling, Portfolio Analytics, Risk Models<br>
+            <strong>Programming:</strong> Python, SQL, Power BI, Tableau<br>
+            <strong>Machine Learning:</strong> Regression, Classification, Forecasting Models<br>
+            <strong>Tools:</strong> Bloomberg, Excel (Advanced), GitHub</p>
+        </div>
+    </section>
 
-		</div>
+    <!-- About -->
+    <section id="about" class="three">
+        <div class="container">
+            <header><h2>About Me</h2></header>
+            <p>I’m a Rotman Commerce student specializing in Finance, Economics, Data Analytics, and Data Science.
+            I blend financial modeling with machine learning to build practical, insight-driven tools for capital markets.
+            Passionate about automation, investment research, and quantitative analysis.</p>
+        </div>
+    </section>
 
-		<!-- Footer -->
-		<div id="footer">
-			<ul class="copyright">
-				<li>&copy; 2024 Ahmed Abdulrahman. All rights reserved.</li>
-				<li>Design: HTML5 UP</li>
-			</ul>
-		</div>
+    <!-- Contact -->
+    <section id="contact" class="four">
+        <div class="container">
+            <header><h2>Contact</h2></header>
+            <p>Feel free to reach out about roles, collaborations, or project discussions.</p>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+            <form method="post" action="#">
+                <div class="row">
+                    <div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+                    <div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+                    <div class="col-12">
+                        <textarea name="message" placeholder="Message"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <input type="submit" value="Send Message" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
 
-	</body>
+</div>
+
+<!-- Footer -->
+<div id="footer">
+    <ul class="copyright">
+        <li>&copy; 2025 Ahmed Abdulrahman. All rights reserved.</li>
+        <li>Design: HTML5 UP</li>
+    </ul>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
 </html>
