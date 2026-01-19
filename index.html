@@ -116,6 +116,36 @@
             border: 1px solid var(--steel-gray);
             border-radius: 6px;
         }
+        /* Logo layout: photo + name */
+.logo-flex {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Headshot next to name */
+.avatar-left img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.15);
+}
+
+/* Name text */
+.logo-text h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.1;
+}
+
+/* Subtitle under name */
+.logo-text p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #cfd9f1;
+}
+
     </style>
 </head>
 
@@ -242,6 +272,7 @@
 
 </body>
 </html>
+
 
 
 
