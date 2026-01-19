@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-    <!-- Fonts -->
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -13,14 +13,13 @@
     <style>
         :root {
             --royal-blue: #2F6BFF;
-            --navy: #102A54;
+            --navy: #0E2342;
             --text-light: #F0F4FA;
             --section-bg: #F7F9FB;
-            --steel-gray: #E5E9F0;
         }
 
         body {
-            background-color: var(--navy);
+            background: var(--navy);
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
@@ -29,71 +28,117 @@
             letter-spacing: -0.3px;
         }
 
-        /* Header */
+        /* =========================
+           SIDEBAR (LEFT)
+        ========================= */
+
         #header {
+            width: 260px;
             background: var(--navy);
         }
 
-        #header #logo h1 {
+        #main {
+            margin-left: 260px;
+        }
+
+        /* Remove HTML5 UP image box */
+        #logo .image {
+            background: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+
+        /* Logo layout */
+        .logo-flex {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar-left img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .logo-text h1 {
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.1;
+            white-space: nowrap;
             color: var(--royal-blue);
         }
 
-        #header p {
-            color: var(--text-light);
-            font-size: 0.85rem;
+        .logo-text p {
+            margin: 2px 0 0 0;
+            font-size: 0.7rem;
+            line-height: 1.2;
+            color: #cfd9f1;
         }
 
-        /* Avatar */
-        .image.avatar48 img {
-            border-radius: 50%;
-            object-fit: cover;
+        /* Nav */
+        #nav ul li a {
+            font-size: 0.9rem;
+            padding: 0.4em 0;
         }
 
-        /* Hero */
+        /* =========================
+           HERO / INTRO
+        ========================= */
+
         #top {
             background: var(--navy);
             color: var(--text-light);
-            padding: 4em 0 3em 0 !important;
+            padding: 3em 0 2.5em 0 !important;
         }
 
         .hero-name {
-            font-size: 3.2rem;
-            margin-bottom: 0.3em;
+            font-size: 3rem;
+            margin-bottom: 0.25em;
         }
 
         .hero-subtitle {
-            font-size: 1.05rem;
+            font-size: 1rem;
             color: #dbe4ff;
-            margin-bottom: 0.2em;
+            margin-bottom: 0.15em;
         }
 
         .hero-credentials {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #b9c7e6;
         }
 
-        .button.scrolly {
+        #top .button {
             background: var(--royal-blue);
             border: none;
-            color: white !important;
-            margin-top: 1.2em;
+            font-size: 0.85rem;
+            padding: 0.6em 1.4em;
+            margin-top: 1.1em;
         }
 
-        /* Sections */
+        /* =========================
+           SECTIONS
+        ========================= */
+
         #about, #portfolio, #skills, #contact {
             background: var(--section-bg);
             color: #111;
         }
 
-        /* About */
         .about-tight p {
             max-width: 760px;
             margin: 0 auto 1.2em auto;
             line-height: 1.65;
-            font-size: 0.98rem;
+            font-size: 0.95rem;
         }
 
-        /* Projects */
+        /* =========================
+           PROJECT CARDS
+        ========================= */
+
         #portfolio .item {
             background: white;
             border-radius: 12px;
@@ -103,49 +148,13 @@
         }
 
         #portfolio .item:hover {
-            transform: translateY(-6px);
+            transform: translateY(-5px);
         }
 
         #portfolio .item header h3 {
             font-size: 0.95rem;
             margin: 0.6em 0 0.4em 0;
         }
-
-        /* Inputs */
-        input, textarea {
-            border: 1px solid var(--steel-gray);
-            border-radius: 6px;
-        }
-        /* Logo layout: photo + name */
-.logo-flex {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-/* Headshot next to name */
-.avatar-left img {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid rgba(255,255,255,0.15);
-}
-
-/* Name text */
-.logo-text h1 {
-    margin: 0;
-    font-size: 1.2rem;
-    line-height: 1.1;
-}
-
-/* Subtitle under name */
-.logo-text p {
-    margin: 0;
-    font-size: 0.75rem;
-    color: #cfd9f1;
-}
-
     </style>
 </head>
 
@@ -155,18 +164,19 @@
 <div id="header">
     <div class="top">
 
+        <!-- Logo -->
         <div id="logo" class="logo-flex">
-    <span class="image avatar48 avatar-left">
-        <img src="images/headshot.png" alt="Ahmed Abdulrahman headshot" />
-    </span>
+            <span class="image avatar48 avatar-left">
+                <img src="images/headshot.png" alt="Ahmed Abdulrahman headshot" />
+            </span>
 
-    <div class="logo-text">
-        <h1 id="title">Ahmed Abdulrahman</h1>
-        <p>Finance • Data Analytics • CFA Level I</p>
-    </div>
-</div>
+            <div class="logo-text">
+                <h1>Ahmed Abdulrahman</h1>
+                <p>Finance • Data Analytics • CFA Level I</p>
+            </div>
+        </div>
 
-
+        <!-- Nav -->
         <nav id="nav">
             <ul>
                 <li><a href="#top">Intro</a></li>
@@ -176,13 +186,14 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+
     </div>
 </div>
 
 <!-- Main -->
 <div id="main">
 
-<!-- Hero -->
+<!-- Intro -->
 <section id="top">
     <div class="container">
         <header>
@@ -191,9 +202,10 @@
                 Portfolio Analytics • Financial Modeling • Data-Driven Investing
             </p>
             <p class="hero-credentials">
-                Rotman Commerce • CFA Level I • Capital Markets & Analytics
+                Rotman Commerce • CFA Level I • Capital Markets
             </p>
         </header>
+
         <footer>
             <a href="#portfolio" class="button scrolly">View Projects</a>
         </footer>
@@ -208,16 +220,13 @@
         <p>
             I am a Rotman Commerce graduate specializing in Finance, Economics, and Data Analytics,
             with experience supporting portfolio strategy, asset allocation, and investment analysis
-            across public markets. I have worked in portfolio analytics and commercial banking,
-            delivering market-driven insights tied to macroeconomic conditions, pricing dynamics,
-            and risk considerations.
+            across public markets.
         </p>
 
         <p>
-            My work combines traditional financial modeling (DCF, LBO, M&A) with data analytics
-            and automation using Python, SQL, and BI tools. I am particularly interested in roles
-            where data, markets, and decision-making intersect—supporting investment teams with
-            rigorous, practical analysis. I have passed CFA Level I and am a Level II candidate.
+            My work combines financial modeling (DCF, LBO, M&A) with analytics and automation using
+            Python, SQL, and BI tools. I am particularly interested in data-driven roles that support
+            investment decision-making. I have passed CFA Level I and am a Level II candidate.
         </p>
     </div>
 </section>
@@ -226,7 +235,7 @@
 <section id="portfolio">
     <div class="container">
         <header><h2>Projects</h2></header>
-        <p>Selected work across finance, markets, and analytics.</p>
+        <p>Selected finance and analytics work.</p>
 
         <div class="row">
             <div class="col-4 col-12-mobile">
@@ -235,7 +244,7 @@
             </div>
             <div class="col-4 col-12-mobile">
                 <article class="item"><header><h3>Trading Strategy Backtest</h3></header></article>
-                <article class="item"><header><h3>Macro-Driven Market Analysis</h3></header></article>
+                <article class="item"><header><h3>Macro Market Analysis</h3></header></article>
             </div>
             <div class="col-4 col-12-mobile">
                 <article class="item"><header><h3>Risk & Performance Attribution</h3></header></article>
@@ -261,7 +270,7 @@
 <section id="contact">
     <div class="container">
         <header><h2>Contact</h2></header>
-        <p>Open to full-time roles, internships, and discussions.</p>
+        <p>Open to full-time opportunities and conversations.</p>
     </div>
 </section>
 
@@ -272,8 +281,3 @@
 
 </body>
 </html>
-
-
-
-
-
