@@ -31,7 +31,10 @@
             letter-spacing: -0.3px;
         }
 
-        /* Sidebar */
+        /* =====================
+           SIDEBAR
+        ===================== */
+
         #header {
             width: 300px;
             background: var(--sidebar-bg);
@@ -98,7 +101,10 @@
             color: var(--sidebar-text);
         }
 
-        /* Hero */
+        /* =====================
+           HERO
+        ===================== */
+
         #top {
             background: linear-gradient(135deg, #0E2342 0%, #09182F 100%);
             color: var(--text-light);
@@ -130,7 +136,10 @@
             margin-top: 1.8em;
         }
 
-        /* Sections */
+        /* =====================
+           SECTIONS
+        ===================== */
+
         #about, #experience, #projects, #contact {
             background: var(--section-bg);
             color: #111;
@@ -144,38 +153,58 @@
             text-align: center;
         }
 
-        /* Experience */
-        .experience-group {
+        /* =====================
+           EXPERIENCE (COMPACT)
+        ===================== */
+
+        .experience-list {
             max-width: 900px;
-            margin: 0 auto 2.8em auto;
+            margin: 0 auto;
         }
 
-        .role {
-            margin-bottom: 2.4em;
+        .experience-item {
+            display: grid;
+            grid-template-columns: 56px 1fr;
+            gap: 1.4em;
+            padding: 1.6em 0;
+            border-bottom: 1px solid #E5E7EB;
         }
 
-        .role h3 {
-            font-size: 1.15rem;
-            margin-bottom: 0.2em;
+        .experience-item:last-child {
+            border-bottom: none;
         }
 
-        .role .company {
-            font-size: 0.9rem;
-            color: #444;
-            margin-bottom: 0.6em;
+        .experience-logo img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
         }
 
-        .role ul {
+        .experience-content h3 {
+            margin: 0;
+            font-size: 1.05rem;
+        }
+
+        .experience-content .company {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 0.5em;
+        }
+
+        .experience-content ul {
             margin-left: 1.1em;
         }
 
-        .role ul li {
-            font-size: 0.95rem;
+        .experience-content ul li {
+            font-size: 0.92rem;
             line-height: 1.55;
-            margin-bottom: 0.45em;
+            margin-bottom: 0.35em;
         }
 
-        /* Projects */
+        /* =====================
+           PROJECTS
+        ===================== */
+
         .project-group {
             margin-bottom: 3em;
         }
@@ -212,7 +241,10 @@
             color: #444;
         }
 
-        /* Contact */
+        /* =====================
+           CONTACT
+        ===================== */
+
         .contact-box {
             text-align: center;
             padding: 3em 1em;
@@ -230,6 +262,7 @@
 
 <div id="header">
     <div class="top">
+
         <div id="logo">
             <div class="identity">
                 <img src="images/headshot.png" alt="Ahmed Abdulrahman headshot">
@@ -247,6 +280,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+
     </div>
 </div>
 
@@ -279,46 +313,66 @@
     <div class="container">
         <h2 style="text-align:center;">Experience</h2>
 
-        <div class="experience-group">
+        <div class="experience-list">
 
-            <div class="role">
-                <h3>Portfolio Analyst Intern</h3>
-                <div class="company">RBC Global Asset Management</div>
-                <ul>
-                    <li>Supported portfolio strategy and asset allocation analysis across public markets, contributing to investment insights used by senior leadership</li>
-                    <li>Built market-driven analyses linking GDP, inflation, and central bank policy to portfolio performance and positioning</li>
-                    <li>Developed advisor-facing materials and commentary supporting client discussions and asset growth</li>
-                </ul>
+            <div class="experience-item">
+                <div class="experience-logo">
+                    <img src="images/rbc.png" alt="RBC Global Asset Management">
+                </div>
+                <div class="experience-content">
+                    <h3>Portfolio Analyst Intern</h3>
+                    <div class="company">RBC Global Asset Management</div>
+                    <ul>
+                        <li>Supported portfolio strategy and asset allocation analysis across public markets, contributing to insights used by senior leadership</li>
+                        <li>Built macro-driven analyses linking GDP, inflation, and central bank policy to portfolio performance and positioning</li>
+                        <li>Developed advisor-facing materials supporting client discussions and asset growth</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="role">
-                <h3>Financial Analyst</h3>
-                <div class="company">RTech Solutions</div>
-                <ul>
-                    <li>Built and maintained financial models supporting budgeting, forecasting, and scenario analysis</li>
-                    <li>Analyzed financial and operational data to identify cost drivers, trends, and performance gaps</li>
-                    <li>Prepared management-ready reports translating financial results into actionable insights</li>
-                </ul>
+            <div class="experience-item">
+                <div class="experience-logo">
+                    <img src="images/rtech.jfif" alt="RTech Solutions">
+                </div>
+                <div class="experience-content">
+                    <h3>Financial Analyst</h3>
+                    <div class="company">RTech Solutions</div>
+                    <ul>
+                        <li>Built and maintained financial models supporting budgeting, forecasting, and scenario analysis</li>
+                        <li>Analyzed financial and operational data to identify cost drivers, trends, and performance gaps</li>
+                        <li>Prepared management-ready reports translating financial results into actionable insights</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="role">
-                <h3>Commercial Banking Analyst Intern</h3>
-                <div class="company">IG Wealth Management</div>
-                <ul>
-                    <li>Supported pricing and product strategy for a large mortgage portfolio through competitor and market analysis</li>
-                    <li>Built dashboards and analytical tools enabling leadership to monitor pricing trends</li>
-                    <li>Improved internal rate exception and approval workflows to accelerate decision-making</li>
-                </ul>
+            <div class="experience-item">
+                <div class="experience-logo">
+                    <img src="images/ig.png" alt="IG Wealth Management">
+                </div>
+                <div class="experience-content">
+                    <h3>Commercial Banking Analyst Intern</h3>
+                    <div class="company">IG Wealth Management</div>
+                    <ul>
+                        <li>Supported pricing and product strategy for a large mortgage portfolio through competitor and market analysis</li>
+                        <li>Built dashboards and analytical tools enabling leadership to monitor pricing trends</li>
+                        <li>Improved internal rate exception and approval workflows to accelerate decision-making</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="role">
-                <h3>Bank Teller</h3>
-                <div class="company">Bank of Montreal (BMO)</div>
-                <ul>
-                    <li>Delivered frontline client service while handling financial transactions in a regulated environment</li>
-                    <li>Built trust with clients through accuracy, discretion, and clear communication</li>
-                    <li>Developed a strong foundation in retail banking operations and compliance</li>
-                </ul>
+            <div class="experience-item">
+                <div class="experience-logo">
+                    <img src="images/bmo.jpg" alt="Bank of Montreal">
+                </div>
+                <div class="experience-content">
+                    <h3>Bank Teller</h3>
+                    <div class="company">Bank of Montreal (BMO)</div>
+                    <ul>
+                        <li>Delivered frontline client service while handling financial transactions in a regulated environment</li>
+                        <li>Built trust with clients through accuracy, discretion, and clear communication</li>
+                        <li>Developed a strong foundation in retail banking operations and compliance</li>
+                    </ul>
+                </div>
             </div>
 
         </div>
