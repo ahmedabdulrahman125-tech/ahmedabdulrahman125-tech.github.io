@@ -26,13 +26,13 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             font-weight: 600;
             letter-spacing: -0.3px;
         }
 
         /* =====================
-           SIDEBAR (FIXED MODEL)
+           SIDEBAR
         ===================== */
 
         #header {
@@ -46,17 +46,12 @@
             background: var(--main-bg);
         }
 
-        /* Remove HTML5 UP image chrome */
         #logo .image {
             background: none !important;
             border: none !important;
             box-shadow: none !important;
             padding: 0 !important;
         }
-
-        /* =====================
-           IDENTITY (STACKED)
-        ===================== */
 
         #logo {
             padding: 2.2em 1.4em 1.6em 1.4em;
@@ -80,20 +75,14 @@
         .identity h1 {
             margin: 0;
             font-size: 1.15rem;
-            line-height: 1.25;
             color: var(--sidebar-text);
         }
 
         .identity p {
             margin-top: 0.4em;
             font-size: 0.75rem;
-            line-height: 1.45;
             color: var(--sidebar-muted);
         }
-
-        /* =====================
-           NAVIGATION
-        ===================== */
 
         #nav {
             margin-top: 2.6em;
@@ -110,7 +99,6 @@
         #nav ul li a {
             font-size: 0.95rem;
             color: var(--sidebar-text);
-            display: inline-block;
         }
 
         /* =====================
@@ -126,18 +114,18 @@
 
         .hero-name {
             font-size: 3.1rem;
-            margin-bottom: 0.4em;
         }
 
         .hero-subtitle {
             font-size: 1.05rem;
             color: #dbe4ff;
-            margin-bottom: 0.3em;
+            margin-top: 0.5em;
         }
 
         .hero-credentials {
             font-size: 0.9rem;
             color: #b9c7e6;
+            margin-top: 0.4em;
         }
 
         #top .button {
@@ -152,7 +140,7 @@
            SECTIONS
         ===================== */
 
-        #about, #portfolio, #skills, #contact {
+        #about, #projects, #contact {
             background: var(--section-bg);
             color: #111;
         }
@@ -164,6 +152,66 @@
             font-size: 0.95rem;
             text-align: center;
         }
+
+        /* =====================
+           PROJECTS
+        ===================== */
+
+        .project-group {
+            margin-bottom: 3em;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.4em;
+            margin-top: 1.2em;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 14px;
+            padding: 1.4em;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
+            text-decoration: none;
+            color: #111;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .project-card h4 {
+            margin-bottom: 0.4em;
+            font-size: 1rem;
+        }
+
+        .project-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        /* =====================
+           CONTACT
+        ===================== */
+
+        .contact-box {
+            text-align: center;
+            padding: 3em 1em;
+        }
+
+        .contact-box p {
+            font-size: 1rem;
+            margin-top: 1em;
+        }
+
+        .contact-box a {
+            color: var(--accent);
+            font-weight: 500;
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -173,7 +221,6 @@
 <div id="header">
     <div class="top">
 
-        <!-- Identity -->
         <div id="logo">
             <div class="identity">
                 <img src="images/headshot.png" alt="Ahmed Abdulrahman headshot">
@@ -182,13 +229,11 @@
             </div>
         </div>
 
-        <!-- Nav -->
         <nav id="nav">
             <ul>
                 <li><a href="#top">Intro</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -201,35 +246,110 @@
 
 <section id="top">
     <div class="container">
-        <header>
-            <h1 class="hero-name">Ahmed Abdulrahman</h1>
-            <p class="hero-subtitle">
-                Portfolio Analytics • Financial Modeling • Data-Driven Investing
-            </p>
-            <p class="hero-credentials">
-                Rotman Commerce • CFA Level I • Capital Markets
-            </p>
-        </header>
-
-        <footer>
-            <a href="#portfolio" class="button scrolly">View Projects</a>
-        </footer>
+        <h1 class="hero-name">Ahmed Abdulrahman</h1>
+        <p class="hero-subtitle">Portfolio Analytics • Financial Modeling • Data-Driven Investing</p>
+        <p class="hero-credentials">Rotman Commerce • CFA Level I • Capital Markets</p>
+        <a href="#projects" class="button scrolly">View Projects</a>
     </div>
 </section>
 
 <section id="about">
     <div class="container about-tight">
-        <header><h2>About Me</h2></header>
-
+        <h2>About Me</h2>
         <p>
             Rotman Commerce graduate specializing in Finance, Economics, and Data Analytics with experience
             supporting portfolio strategy, asset allocation, and investment analysis across public markets.
         </p>
-
         <p>
             Focused on combining financial modeling with analytics and automation using Python, SQL, and BI tools.
             CFA Level I passed; Level II candidate.
         </p>
     </div>
-</
+</section>
 
+<section id="projects">
+    <div class="container">
+        <h2 style="text-align:center;">Projects</h2>
+
+        <!-- Finance -->
+        <div class="project-group">
+            <h3>Finance</h3>
+            <div class="project-grid">
+                <a href="#" class="project-card">
+                    <h4>Finance Project 1</h4>
+                    <p>Placeholder description for a finance-focused project.</p>
+                </a>
+                <a href="#" class="project-card">
+                    <h4>Finance Project 2</h4>
+                    <p>Placeholder description for a finance-focused project.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Economics -->
+        <div class="project-group">
+            <h3>Economics</h3>
+            <div class="project-grid">
+                <a href="#" class="project-card">
+                    <h4>Economics Project 1</h4>
+                    <p>Placeholder description for an economics research project.</p>
+                </a>
+                <a href="#" class="project-card">
+                    <h4>Economics Project 2</h4>
+                    <p>Placeholder description for an economics research project.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Data Science -->
+        <div class="project-group">
+            <h3>Data Science</h3>
+            <div class="project-grid">
+                <a href="#" class="project-card">
+                    <h4>Data Science Project 1</h4>
+                    <p>Placeholder description for a machine learning project.</p>
+                </a>
+                <a href="#" class="project-card">
+                    <h4>Data Science Project 2</h4>
+                    <p>Placeholder description for a machine learning project.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Data Analytics -->
+        <div class="project-group">
+            <h3>Data Analytics</h3>
+            <div class="project-grid">
+                <a href="#" class="project-card">
+                    <h4>Data Analytics Project 1</h4>
+                    <p>Placeholder description for a dashboard or analytics project.</p>
+                </a>
+                <a href="#" class="project-card">
+                    <h4>Data Analytics Project 2</h4>
+                    <p>Placeholder description for a dashboard or analytics project.</p>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container contact-box">
+        <h2>Contact</h2>
+        <p>Email:</p>
+        <p>
+            <a href="mailto:ahmed.abdulrahman@alumni.utoronto.ca">
+                ahmed.abdulrahman@alumni.utoronto.ca
+            </a>
+        </p>
+    </div>
+</section>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
