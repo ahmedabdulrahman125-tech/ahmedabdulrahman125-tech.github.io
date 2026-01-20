@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8" />
     <title>Ahmed Abdulrahman | Finance & Data</title>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <style>
         :root {
-            --navy-hero: #0b1f3b;
-            --navy-about: #0e2a52;
-            --navy-sidebar: #0a1a33;
-            --accent-blue: #2f6bff;
-            --text-light: #e6ecff;
-            --text-muted: #b7c5e6;
-            --text-dark: #2a2a2a;
+            --navy-hero: #0b1f3a;
+            --navy-about: #102a4d;
+            --navy-sidebar: #0a1b33;
+            --accent: #2f6bff;
+            --text-light: #ffffff;
+            --text-muted: #c9d6ee;
+            --section-bg: #f7f9fc;
         }
 
         * {
@@ -25,22 +25,20 @@
 
         body {
             display: flex;
-            background: #f6f7fb;
-            color: var(--text-dark);
+            background: var(--section-bg);
         }
 
-        /* ================= SIDEBAR ================= */
-        #sidebar {
-            width: 260px;
+        /* Sidebar */
+        #header {
             background: var(--navy-sidebar);
+            width: 260px;
             min-height: 100vh;
-            padding: 2rem 1.5rem;
             position: fixed;
         }
 
         #logo {
             text-align: center;
-            margin-bottom: 2.5rem;
+            padding: 2em 1em;
         }
 
         #logo img {
@@ -48,221 +46,234 @@
             height: 110px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.7em;
         }
 
         #logo h1 {
-            font-size: 1.3rem;
-            color: var(--accent-blue);
+            color: white;
+            font-size: 1.2em;
+            margin-bottom: 0.3em;
         }
 
         #logo p {
-            font-size: 0.85rem;
             color: var(--text-muted);
-            margin-top: 0.3rem;
+            font-size: 0.85em;
             line-height: 1.4;
         }
 
-        nav a {
+        #nav ul {
+            list-style: none;
+            text-align: center;
+            margin-top: 1.5em;
+        }
+
+        #nav ul li a {
             display: block;
             color: white;
             text-decoration: none;
-            margin: 1.2rem 0;
-            font-size: 1.05rem;
+            padding: 0.9em 0;
+            font-size: 1.05em;
         }
 
-        nav a:hover {
-            color: var(--accent-blue);
+        #nav ul li a:hover {
+            color: var(--accent);
         }
 
-        /* ================= MAIN ================= */
+        /* Main */
         #main {
             margin-left: 260px;
             width: calc(100% - 260px);
         }
 
         section {
-            padding: 4.5rem 4rem;
+            padding: 5em 3em;
         }
 
-        /* ================= HERO ================= */
-        #hero {
-            background: var(--navy-hero);
+        /* Hero */
+        #top {
+            background: linear-gradient(135deg, var(--navy-hero), #08162b);
             text-align: center;
             color: white;
         }
 
-        #hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+        #top h2 {
+            font-size: 2.8em;
+            margin-bottom: 0.4em;
         }
 
-        #hero .subtitle {
-            color: var(--text-light);
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        #hero .subline {
+        #top p {
             color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 2.2rem;
+            font-size: 1.05em;
+            margin-bottom: 0.6em;
         }
 
-        .btn {
-            background: var(--accent-blue);
+        .button {
+            background: var(--accent);
             color: white;
-            padding: 0.9rem 1.6rem;
+            padding: 0.9em 1.6em;
             border-radius: 6px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             display: inline-block;
+            margin-top: 1.6em;
         }
 
-        /* ================= ABOUT ================= */
+        /* About */
         #about {
-            background: var(--navy-about);
-            text-align: center;
+            background: linear-gradient(135deg, var(--navy-about), #0c2442);
             color: white;
+            text-align: center;
         }
 
         #about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.8rem;
-            color: white;
+            font-size: 2.5em;
+            margin-bottom: 1.5em;
         }
 
         #about p {
             max-width: 760px;
-            margin: 0 auto 1.2rem auto;
+            margin: 0 auto 1.2em;
+            color: var(--text-muted);
             line-height: 1.7;
-            color: var(--text-light);
         }
 
-        /* ================= EXPERIENCE ================= */
+        /* Experience */
+        #experience {
+            background: white;
+        }
+
         #experience h2 {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
+            font-size: 2.5em;
+            margin-bottom: 3em;
             color: #143f82;
         }
 
-        .experience-item {
-            display: grid;
-            grid-template-columns: 140px 1fr;
-            gap: 1.5rem;
+        .exp-block {
+            max-width: 900px;
+            margin: 0 auto 3em;
+        }
+
+        .exp-header {
+            display: flex;
+            align-items: center;
+            gap: 1.2em;
+            margin-bottom: 0.6em;
+        }
+
+        .exp-header img {
+            height: 55px;
+        }
+
+        .exp-header h3 {
+            margin: 0;
+            color: #143f82;
+        }
+
+        .exp-header span {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .exp-block ul {
+            margin-left: 1.2em;
+        }
+
+        .exp-block li {
+            margin-bottom: 0.4em;
+        }
+
+        /* Projects */
+        #projects {
+            background: var(--section-bg);
+        }
+
+        #projects h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 3em;
+            color: #143f82;
+        }
+
+        .project-group {
             max-width: 1000px;
-            margin: 0 auto 2.5rem auto;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #ddd;
+            margin: 0 auto 3.2em;
         }
 
-        .experience-logo img {
-            object-fit: contain;
-        }
-
-        .rbc, .ig, .bmo {
-            width: 110px;
-        }
-
-        .rtech {
-            width: 72px;
-        }
-
-        .experience-content h3 {
-            font-size: 1.2rem;
+        .project-group h3 {
             color: #143f82;
-            margin-bottom: 0.2rem;
+            margin-bottom: 1.2em;
+            font-size: 1.4em;
         }
 
-        .experience-content h4 {
-            font-size: 1rem;
-            font-weight: 500;
-            margin-bottom: 0.8rem;
+        .project {
+            background: white;
+            padding: 1.4em 1.6em;
+            border-radius: 8px;
+            margin-bottom: 1.2em;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
         }
 
-        .experience-content ul {
-            padding-left: 1.1rem;
+        .project h4 {
+            margin-bottom: 0.4em;
+        }
+
+        .project p {
+            margin-bottom: 0.6em;
+            color: #555;
             line-height: 1.6;
         }
 
-        .experience-content li {
-            margin-bottom: 0.4rem;
+        .project a {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
         }
 
-        /* ================= PROJECTS ================= */
-        #projects h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #143f82;
-        }
-
-        .project-category {
-            max-width: 900px;
-            margin: 0 auto 2.2rem auto;
-        }
-
-        .project-category h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-placeholder {
-            color: #555;
-            font-style: italic;
-        }
-
-        /* ================= CONTACT ================= */
+        /* Contact */
         #contact {
-            background: #f0f3fa;
+            background: white;
             text-align: center;
-        }
-
-        #contact h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-        }
-
-        #contact p {
-            font-size: 1.05rem;
         }
     </style>
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
-<aside id="sidebar">
+<!-- Sidebar -->
+<div id="header">
     <div id="logo">
         <img src="images/headshot.png" alt="Ahmed Abdulrahman">
         <h1>Ahmed Abdulrahman</h1>
         <p>Finance • Data Analytics<br>CFA Level I</p>
     </div>
 
-    <nav>
-        <a href="#hero">Intro</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <nav id="nav">
+        <ul>
+            <li><a href="#top">Intro</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
-</aside>
+</div>
 
-<!-- MAIN -->
+<!-- Main -->
 <div id="main">
 
-<section id="hero">
-    <h1>Ahmed Abdulrahman</h1>
-    <div class="subtitle">Portfolio Analytics • Financial Modeling • Data-Driven Investing</div>
-    <div class="subline">Rotman Commerce • CFA Level I • Capital Markets</div>
-    <a href="#projects" class="btn">View Projects</a>
+<section id="top">
+    <h2>Ahmed Abdulrahman</h2>
+    <p>Portfolio Analytics • Financial Modeling • Data-Driven Investing</p>
+    <p>Rotman Commerce • CFA Level I • Capital Markets</p>
+    <a href="#projects" class="button">View Projects</a>
 </section>
 
 <section id="about">
     <h2>About Me</h2>
     <p>
-        Rotman Commerce graduate specializing in Finance, Economics, and Data Analytics with experience supporting
-        portfolio strategy, asset allocation, and investment analysis across public markets.
+        Rotman Commerce graduate specializing in Finance, Economics, and Data Analytics with experience
+        supporting portfolio strategy, asset allocation, and investment analysis across public markets.
     </p>
     <p>
         Focused on combining financial modeling with analytics and automation using Python, SQL, and BI tools.
@@ -270,97 +281,106 @@
     </p>
 </section>
 
-<section id="experience">
-    <h2>Experience</h2>
-
-    <div class="experience-item">
-        <div class="experience-logo">
-            <img src="images/rbc.png" class="rbc">
-        </div>
-        <div class="experience-content">
-            <h3>RBC Global Asset Management</h3>
-            <h4>Portfolio Analyst Intern</h4>
-            <ul>
-                <li>Supported portfolio strategy and asset allocation across public markets</li>
-                <li>Built macro-driven analyses linking GDP, inflation, and policy to performance</li>
-                <li>Produced advisor-facing materials supporting client asset growth</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="experience-item">
-        <div class="experience-logo">
-            <img src="images/ig.png" class="ig">
-        </div>
-        <div class="experience-content">
-            <h3>IG Wealth Management</h3>
-            <h4>Commercial Banking Analyst Intern</h4>
-            <ul>
-                <li>Supported pricing and product strategy for a large mortgage portfolio</li>
-                <li>Built dashboards tracking pricing trends</li>
-                <li>Improved rate exception and approval workflows</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="experience-item">
-        <div class="experience-logo">
-            <img src="images/rtech.jfif" class="rtech">
-        </div>
-        <div class="experience-content">
-            <h3>RTech Solutions</h3>
-            <h4>Financial Analyst</h4>
-            <ul>
-                <li>Built financial models for budgeting, forecasting, and scenarios</li>
-                <li>Analyzed cost drivers and operational inefficiencies</li>
-                <li>Prepared management-ready financial reports</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="experience-item">
-        <div class="experience-logo">
-            <img src="images/bmo.jpg" class="bmo">
-        </div>
-        <div class="experience-content">
-            <h3>Bank of Montreal (BMO)</h3>
-            <h4>Bank Teller</h4>
-            <ul>
-                <li>Delivered regulated frontline banking services</li>
-                <li>Built trust through accuracy and discretion</li>
-                <li>Developed operational and compliance foundation</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
 <section id="projects">
-    <h2>Projects</h2>
+    <h2>Selected Work</h2>
 
-    <div class="project-category">
-        <h3>Finance</h3>
-        <p class="project-placeholder">Project placeholders coming soon</p>
+    <div class="project-group">
+        <h3>Equity & Investment Research</h3>
+
+        <div class="project">
+            <h4>Enphase Energy — Equity Research & Valuation</h4>
+            <p>
+                Conducted a fund-style equity research analysis of Enphase Energy, evaluating the business model,
+                competitive positioning, growth drivers, and industry dynamics within the renewable energy sector.
+                Assessed valuation considerations and key risks impacting long-term investment performance.
+            </p>
+            <a href="projects/Enphase analysis.pdf" target="_blank">View Analysis</a>
+        </div>
+
+        <div class="project">
+            <h4>Ageos Pharmaceuticals — Company & Industry Overview</h4>
+            <p>
+                Developed a comprehensive overview of Ageos Pharmaceuticals, analyzing the company’s strategic focus,
+                pipeline positioning, and broader pharmaceutical industry landscape. Evaluated market opportunity
+                and competitive forces influencing firm performance.
+            </p>
+            <a href="projects/Ageos pharacutical.pdf" target="_blank">View Analysis</a>
+        </div>
     </div>
 
-    <div class="project-category">
-        <h3>Economics</h3>
-        <p class="project-placeholder">Project placeholders coming soon</p>
+    <div class="project-group">
+        <h3>Macroeconomic & Policy Analysis</h3>
+
+        <div class="project">
+            <h4>Fertility Trends and Demographic Change in China</h4>
+            <p>
+                Empirical analysis examining long-term fertility trends in China and their relationship to
+                economic growth, labor supply, and government policy. Assessed demographic risks and macroeconomic
+                implications for future development.
+            </p>
+            <a href="projects/ECO 403 Fertility changes in china.pdf" target="_blank">View Paper</a>
+        </div>
+
+        <div class="project">
+            <h4>Economic Impact of COVID-19</h4>
+            <p>
+                Analyzed the macroeconomic effects of the COVID-19 pandemic, focusing on disruptions to economic
+                activity, labor markets, and policy responses. Evaluated short-term shocks and longer-term
+                structural implications.
+            </p>
+            <a href="projects/COvid 19 pandemic.pdf" target="_blank">View Paper</a>
+        </div>
     </div>
 
-    <div class="project-category">
-        <h3>Data Science</h3>
-        <p class="project-placeholder">Project placeholders coming soon</p>
+    <div class="project-group">
+        <h3>Industry & Technology Research</h3>
+
+        <div class="project">
+            <h4>Blockchain Technology — Economic & Industry Overview</h4>
+            <p>
+                Produced a structured overview of blockchain technology, outlining core mechanisms, real-world
+                applications, and economic implications. Assessed adoption challenges and potential impact
+                across financial and non-financial industries.
+            </p>
+            <a href="projects/Blockchain overview.pdf" target="_blank">View Overview</a>
+        </div>
+
+        <div class="project">
+            <h4>ECE Industry Landscape Analysis</h4>
+            <p>
+                Conducted an industry-level analysis of the ECE sector, identifying growth drivers, competitive
+                dynamics, and key risks. Evaluated strategic positioning and market trends influencing firm behavior.
+            </p>
+            <a href="projects/ECE Industry Overview.pdf" target="_blank">View Report</a>
+        </div>
     </div>
 
-    <div class="project-category">
-        <h3>Data Analytics</h3>
-        <p class="project-placeholder">Project placeholders coming soon</p>
+    <div class="project-group">
+        <h3>Market & Consumer Analytics</h3>
+
+        <div class="project">
+            <h4>Video Game Industry — Market & Revenue Analysis</h4>
+            <p>
+                Analyzed the global video game industry using market data to identify revenue trends, business
+                models, and consumer behavior. Evaluated structural changes shaping growth across platforms.
+            </p>
+            <a href="projects/Video game Analysis.pdf" target="_blank">View Analysis</a>
+        </div>
+
+        <div class="project">
+            <h4>Video Game Industry — Executive Presentation</h4>
+            <p>
+                Developed an executive-style slide deck summarizing key insights from video game market analysis,
+                designed to communicate trends and strategic implications to a non-technical audience.
+            </p>
+            <a href="projects/Video game overview slides.pdf" target="_blank">View Slides</a>
+        </div>
     </div>
 </section>
 
 <section id="contact">
     <h2>Contact</h2>
-    <p>ahmed.abdulrahman@alumni.utoronto.ca</p>
+    <p><strong>ahmed.abdulrahman@alumni.utoronto.ca</strong></p>
 </section>
 
 </div>
