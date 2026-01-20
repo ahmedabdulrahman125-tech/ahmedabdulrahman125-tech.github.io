@@ -31,10 +31,7 @@
             letter-spacing: -0.3px;
         }
 
-        /* =====================
-           SIDEBAR
-        ===================== */
-
+        /* Sidebar */
         #header {
             width: 300px;
             background: var(--sidebar-bg);
@@ -46,16 +43,16 @@
             background: var(--main-bg);
         }
 
+        #logo {
+            padding: 2.2em 1.4em 1.6em 1.4em;
+            text-align: center;
+        }
+
         #logo .image {
             background: none !important;
             border: none !important;
             box-shadow: none !important;
             padding: 0 !important;
-        }
-
-        #logo {
-            padding: 2.2em 1.4em 1.6em 1.4em;
-            text-align: center;
         }
 
         .identity {
@@ -101,10 +98,7 @@
             color: var(--sidebar-text);
         }
 
-        /* =====================
-           HERO
-        ===================== */
-
+        /* Hero */
         #top {
             background: linear-gradient(135deg, #0E2342 0%, #09182F 100%);
             color: var(--text-light);
@@ -136,11 +130,8 @@
             margin-top: 1.8em;
         }
 
-        /* =====================
-           SECTIONS
-        ===================== */
-
-        #about, #projects, #contact {
+        /* Sections */
+        #about, #experience, #projects, #contact {
             background: var(--section-bg);
             color: #111;
         }
@@ -153,10 +144,38 @@
             text-align: center;
         }
 
-        /* =====================
-           PROJECTS
-        ===================== */
+        /* Experience */
+        .experience-group {
+            max-width: 900px;
+            margin: 0 auto 2.8em auto;
+        }
 
+        .role {
+            margin-bottom: 2.4em;
+        }
+
+        .role h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.2em;
+        }
+
+        .role .company {
+            font-size: 0.9rem;
+            color: #444;
+            margin-bottom: 0.6em;
+        }
+
+        .role ul {
+            margin-left: 1.1em;
+        }
+
+        .role ul li {
+            font-size: 0.95rem;
+            line-height: 1.55;
+            margin-bottom: 0.45em;
+        }
+
+        /* Projects */
         .project-group {
             margin-bottom: 3em;
         }
@@ -193,18 +212,10 @@
             color: #444;
         }
 
-        /* =====================
-           CONTACT
-        ===================== */
-
+        /* Contact */
         .contact-box {
             text-align: center;
             padding: 3em 1em;
-        }
-
-        .contact-box p {
-            font-size: 1rem;
-            margin-top: 1em;
         }
 
         .contact-box a {
@@ -217,10 +228,8 @@
 
 <body class="is-preload">
 
-<!-- Sidebar -->
 <div id="header">
     <div class="top">
-
         <div id="logo">
             <div class="identity">
                 <img src="images/headshot.png" alt="Ahmed Abdulrahman headshot">
@@ -233,15 +242,14 @@
             <ul>
                 <li><a href="#top">Intro</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-
     </div>
 </div>
 
-<!-- Main -->
 <div id="main">
 
 <section id="top">
@@ -267,67 +275,89 @@
     </div>
 </section>
 
+<section id="experience">
+    <div class="container">
+        <h2 style="text-align:center;">Experience</h2>
+
+        <div class="experience-group">
+
+            <div class="role">
+                <h3>Portfolio Analyst Intern</h3>
+                <div class="company">RBC Global Asset Management</div>
+                <ul>
+                    <li>Supported portfolio strategy and asset allocation analysis across public markets, contributing to investment insights used by senior leadership</li>
+                    <li>Built market-driven analyses linking GDP, inflation, and central bank policy to portfolio performance and positioning</li>
+                    <li>Developed advisor-facing materials and commentary supporting client discussions and asset growth</li>
+                </ul>
+            </div>
+
+            <div class="role">
+                <h3>Financial Analyst</h3>
+                <div class="company">RTech Solutions</div>
+                <ul>
+                    <li>Built and maintained financial models supporting budgeting, forecasting, and scenario analysis</li>
+                    <li>Analyzed financial and operational data to identify cost drivers, trends, and performance gaps</li>
+                    <li>Prepared management-ready reports translating financial results into actionable insights</li>
+                </ul>
+            </div>
+
+            <div class="role">
+                <h3>Commercial Banking Analyst Intern</h3>
+                <div class="company">IG Wealth Management</div>
+                <ul>
+                    <li>Supported pricing and product strategy for a large mortgage portfolio through competitor and market analysis</li>
+                    <li>Built dashboards and analytical tools enabling leadership to monitor pricing trends</li>
+                    <li>Improved internal rate exception and approval workflows to accelerate decision-making</li>
+                </ul>
+            </div>
+
+            <div class="role">
+                <h3>Bank Teller</h3>
+                <div class="company">Bank of Montreal (BMO)</div>
+                <ul>
+                    <li>Delivered frontline client service while handling financial transactions in a regulated environment</li>
+                    <li>Built trust with clients through accuracy, discretion, and clear communication</li>
+                    <li>Developed a strong foundation in retail banking operations and compliance</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 <section id="projects">
     <div class="container">
         <h2 style="text-align:center;">Projects</h2>
 
-        <!-- Finance -->
         <div class="project-group">
             <h3>Finance</h3>
             <div class="project-grid">
-                <a href="#" class="project-card">
-                    <h4>Finance Project 1</h4>
-                    <p>Placeholder description for a finance-focused project.</p>
-                </a>
-                <a href="#" class="project-card">
-                    <h4>Finance Project 2</h4>
-                    <p>Placeholder description for a finance-focused project.</p>
-                </a>
+                <a href="#" class="project-card"><h4>Finance Project 1</h4><p>Placeholder description.</p></a>
+                <a href="#" class="project-card"><h4>Finance Project 2</h4><p>Placeholder description.</p></a>
             </div>
         </div>
 
-        <!-- Economics -->
         <div class="project-group">
             <h3>Economics</h3>
             <div class="project-grid">
-                <a href="#" class="project-card">
-                    <h4>Economics Project 1</h4>
-                    <p>Placeholder description for an economics research project.</p>
-                </a>
-                <a href="#" class="project-card">
-                    <h4>Economics Project 2</h4>
-                    <p>Placeholder description for an economics research project.</p>
-                </a>
+                <a href="#" class="project-card"><h4>Economics Project 1</h4><p>Placeholder description.</p></a>
+                <a href="#" class="project-card"><h4>Economics Project 2</h4><p>Placeholder description.</p></a>
             </div>
         </div>
 
-        <!-- Data Science -->
         <div class="project-group">
             <h3>Data Science</h3>
             <div class="project-grid">
-                <a href="#" class="project-card">
-                    <h4>Data Science Project 1</h4>
-                    <p>Placeholder description for a machine learning project.</p>
-                </a>
-                <a href="#" class="project-card">
-                    <h4>Data Science Project 2</h4>
-                    <p>Placeholder description for a machine learning project.</p>
-                </a>
+                <a href="#" class="project-card"><h4>Data Science Project 1</h4><p>Placeholder description.</p></a>
+                <a href="#" class="project-card"><h4>Data Science Project 2</h4><p>Placeholder description.</p></a>
             </div>
         </div>
 
-        <!-- Data Analytics -->
         <div class="project-group">
             <h3>Data Analytics</h3>
             <div class="project-grid">
-                <a href="#" class="project-card">
-                    <h4>Data Analytics Project 1</h4>
-                    <p>Placeholder description for a dashboard or analytics project.</p>
-                </a>
-                <a href="#" class="project-card">
-                    <h4>Data Analytics Project 2</h4>
-                    <p>Placeholder description for a dashboard or analytics project.</p>
-                </a>
+                <a href="#" class="project-card"><h4>Data Analytics Project 1</h4><p>Placeholder description.</p></a>
+                <a href="#" class="project-card"><h4>Data Analytics Project 2</h4><p>Placeholder description.</p></a>
             </div>
         </div>
 
@@ -337,7 +367,6 @@
 <section id="contact">
     <div class="container contact-box">
         <h2>Contact</h2>
-        <p>Email:</p>
         <p>
             <a href="mailto:ahmed.abdulrahman@alumni.utoronto.ca">
                 ahmed.abdulrahman@alumni.utoronto.ca
