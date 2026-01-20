@@ -12,16 +12,14 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
-        /* ===== GLOBAL RESET ===== */
         body {
             font-family: 'Inter', sans-serif;
         }
 
-        ul {
-            list-style-position: outside;
-        }
+        /* =====================
+           SIDEBAR (LOCKED + CLEAN)
+        ===================== */
 
-        /* ===== SIDEBAR (LOCKED) ===== */
         #header {
             width: 300px;
             background: #0B1F3A;
@@ -32,20 +30,20 @@
         }
 
         #logo {
-            padding: 2em 1.5em 1em 1.5em;
-            text-align: left;
+            padding: 2em 1.5em 1.2em 1.5em;
+            text-align: center;
         }
 
         #logo img {
-            width: 96px;
-            height: 96px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 0.75em;
+            margin-bottom: 0.8em;
         }
 
         #logo h1 {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             color: #2F6BFF;
             margin: 0;
         }
@@ -57,15 +55,14 @@
             line-height: 1.4;
         }
 
-        #nav ul {
-            margin-top: 1em;
-        }
-
         #nav ul li a {
             color: #E5EDFF;
         }
 
-        /* ===== HERO ===== */
+        /* =====================
+           HERO
+        ===================== */
+
         #top {
             background: linear-gradient(135deg, #0E2342, #09182F);
             color: white;
@@ -89,7 +86,10 @@
             margin-top: 0.3em;
         }
 
-        /* ===== EXPERIENCE ===== */
+        /* =====================
+           EXPERIENCE (COMPACT + RESUME-STYLE)
+        ===================== */
+
         #experience {
             background: #F7F9FB;
             padding: 3em 0;
@@ -102,9 +102,9 @@
 
         .experience-item {
             display: grid;
-            grid-template-columns: 88px 1fr;
-            gap: 1.2em;
-            padding: 1em 0;
+            grid-template-columns: 64px 1fr;
+            gap: 1em;
+            padding: 0.9em 0;
             border-bottom: 1px solid #E5E7EB;
         }
 
@@ -119,9 +119,19 @@
         }
 
         .experience-logo img {
-            width: 72px;
             height: auto;
             object-fit: contain;
+        }
+
+        /* Logo sizing */
+        .experience-logo img.rbc,
+        .experience-logo img.ig,
+        .experience-logo img.bmo {
+            width: 110px;
+        }
+
+        .experience-logo img.rtech {
+            width: 72px;
         }
 
         .experience-content h3 {
@@ -138,16 +148,20 @@
 
         .experience-content ul {
             margin: 0;
-            padding-left: 1.1em;
+            padding-left: 1em;
         }
 
         .experience-content ul li {
             font-size: 0.92rem;
             line-height: 1.45;
             margin-bottom: 0.25em;
+            list-style-position: outside;
         }
 
-        /* ===== PROJECTS ===== */
+        /* =====================
+           PROJECTS
+        ===================== */
+
         #projects {
             background: white;
             padding: 3em 0;
@@ -167,7 +181,10 @@
             border-radius: 10px;
         }
 
-        /* ===== CONTACT ===== */
+        /* =====================
+           CONTACT
+        ===================== */
+
         #contact {
             background: #F7F9FB;
             text-align: center;
@@ -223,7 +240,9 @@
 
             <!-- RBC -->
             <div class="experience-item">
-                <div class="experience-logo"><img src="images/rbc.png"></div>
+                <div class="experience-logo">
+                    <img src="images/rbc.png" class="rbc">
+                </div>
                 <div class="experience-content">
                     <h3>RBC Global Asset Management</h3>
                     <div class="role">Portfolio Analyst Intern</div>
@@ -237,7 +256,9 @@
 
             <!-- IG -->
             <div class="experience-item">
-                <div class="experience-logo"><img src="images/ig.png"></div>
+                <div class="experience-logo">
+                    <img src="images/ig.png" class="ig">
+                </div>
                 <div class="experience-content">
                     <h3>IG Wealth Management</h3>
                     <div class="role">Commercial Banking Analyst Intern</div>
@@ -251,7 +272,9 @@
 
             <!-- RTech -->
             <div class="experience-item">
-                <div class="experience-logo"><img src="images/rtech.jfif"></div>
+                <div class="experience-logo">
+                    <img src="images/rtech.jfif" class="rtech">
+                </div>
                 <div class="experience-content">
                     <h3>RTech Solutions</h3>
                     <div class="role">Financial Analyst</div>
@@ -265,7 +288,9 @@
 
             <!-- BMO -->
             <div class="experience-item">
-                <div class="experience-logo"><img src="images/bmo.jpg"></div>
+                <div class="experience-logo">
+                    <img src="images/bmo.jpg" class="bmo">
+                </div>
                 <div class="experience-content">
                     <h3>Bank of Montreal (BMO)</h3>
                     <div class="role">Bank Teller</div>
