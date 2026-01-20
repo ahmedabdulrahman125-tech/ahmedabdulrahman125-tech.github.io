@@ -17,7 +17,7 @@
         }
 
         /* =====================
-           SIDEBAR (LOCKED + CLEAN)
+           SIDEBAR
         ===================== */
 
         #header {
@@ -67,7 +67,7 @@
             background: linear-gradient(135deg, #0E2342, #09182F);
             color: white;
             text-align: center;
-            padding: 4em 0 3em 0;
+            padding: 4.5em 0 3.5em 0;
         }
 
         .hero-name {
@@ -77,17 +77,47 @@
 
         .hero-subtitle {
             font-size: 1.05rem;
-            margin-top: 0.4em;
+            margin-top: 0.6em;
+            color: #E2E8FF;
         }
 
         .hero-meta {
             font-size: 0.9rem;
-            color: #C6D3F0;
-            margin-top: 0.3em;
+            color: #B9C7E6;
+            margin-top: 0.4em;
+        }
+
+        .hero-button {
+            margin-top: 2em;
+            display: inline-block;
+            background: #2F6BFF;
+            color: white;
+            padding: 0.75em 1.4em;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
         /* =====================
-           EXPERIENCE (COMPACT + RESUME-STYLE)
+           ABOUT
+        ===================== */
+
+        #about {
+            background: #F7F9FB;
+            padding: 3em 0;
+        }
+
+        .about-content {
+            max-width: 780px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* =====================
+           EXPERIENCE
         ===================== */
 
         #experience {
@@ -119,11 +149,9 @@
         }
 
         .experience-logo img {
-            height: auto;
             object-fit: contain;
         }
 
-        /* Logo sizing */
         .experience-logo img.rbc,
         .experience-logo img.ig,
         .experience-logo img.bmo {
@@ -132,6 +160,10 @@
 
         .experience-logo img.rtech {
             width: 72px;
+        }
+
+        .experience-content {
+            text-align: left;
         }
 
         .experience-content h3 {
@@ -143,7 +175,7 @@
         .experience-content .role {
             font-size: 0.9rem;
             color: #444;
-            margin: 0.2em 0 0.45em 0;
+            margin: 0.25em 0 0.45em 0;
         }
 
         .experience-content ul {
@@ -205,7 +237,7 @@
 <div id="header">
     <div class="top">
         <div id="logo">
-            <img src="images/headshot.png" alt="Ahmed Abdulrahman">
+            <img src="images/headshot.jpg" alt="Ahmed Abdulrahman">
             <h1>Ahmed Abdulrahman</h1>
             <p>Finance • Data Analytics<br>CFA Level I</p>
         </div>
@@ -213,6 +245,7 @@
         <nav id="nav">
             <ul>
                 <li><a href="#top">Intro</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -229,6 +262,23 @@
         <h1 class="hero-name">Ahmed Abdulrahman</h1>
         <p class="hero-subtitle">Portfolio Analytics • Financial Modeling • Data-Driven Investing</p>
         <p class="hero-meta">Rotman Commerce • CFA Level I • Capital Markets</p>
+        <a href="#projects" class="hero-button">View Projects</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2 style="text-align:center;">About Me</h2>
+        <div class="about-content">
+            <p>
+                Rotman Commerce graduate specializing in Finance, Economics, and Data Analytics with experience supporting
+                portfolio strategy, asset allocation, and investment analysis across public markets.
+            </p>
+            <p>
+                Focused on combining financial modeling with analytics and automation using Python, SQL, and BI tools.
+                CFA Level I passed; Level II candidate.
+            </p>
+        </div>
     </div>
 </section>
 
@@ -238,7 +288,6 @@
 
         <div class="experience-list">
 
-            <!-- RBC -->
             <div class="experience-item">
                 <div class="experience-logo">
                     <img src="images/rbc.png" class="rbc">
@@ -254,7 +303,6 @@
                 </div>
             </div>
 
-            <!-- IG -->
             <div class="experience-item">
                 <div class="experience-logo">
                     <img src="images/ig.png" class="ig">
@@ -270,7 +318,6 @@
                 </div>
             </div>
 
-            <!-- RTech -->
             <div class="experience-item">
                 <div class="experience-logo">
                     <img src="images/rtech.jfif" class="rtech">
@@ -286,7 +333,6 @@
                 </div>
             </div>
 
-            <!-- BMO -->
             <div class="experience-item">
                 <div class="experience-logo">
                     <img src="images/bmo.jpg" class="bmo">
