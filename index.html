@@ -5,30 +5,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Core CSS -->
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
         :root {
-            --sidebar-bg: #0B1F3A;
+            --navy: #0B1F3A;
+            --navy-dark: #09182F;
+            --accent: #2F6BFF;
             --sidebar-text: #E5EDFF;
             --sidebar-muted: #9FB2D9;
-
-            --main-bg: #0E2342;
-            --accent: #2F6BFF;
-
             --section-bg: #F7F9FB;
-            --text-light: #F0F4FA;
         }
 
         body {
-            background: var(--main-bg);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        h1, h2, h3, h4 {
-            font-weight: 600;
-            letter-spacing: -0.3px;
+            font-family: 'Inter', sans-serif;
         }
 
         /* =====================
@@ -37,68 +31,52 @@
 
         #header {
             width: 300px;
-            background: var(--sidebar-bg);
+            background: var(--navy);
             border-right: 1px solid rgba(255,255,255,0.06);
         }
 
-        #main {
-            margin-left: 300px;
-            background: var(--main-bg);
-        }
-
         #logo {
-            padding: 2.2em 1.4em 1.6em 1.4em;
-            text-align: center;
+            padding: 2em 1.5em 1.2em 1.5em;
+            text-align: left;
         }
 
         #logo .image {
-            background: none !important;
-            border: none !important;
-            box-shadow: none !important;
-            padding: 0 !important;
+            margin-bottom: 1em;
         }
 
-        .identity {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .identity img {
-            width: 108px;
-            height: 108px;
+        #logo img {
+            width: 96px;
+            height: 96px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 0.9em;
         }
 
-        .identity h1 {
-            margin: 0;
-            font-size: 1.15rem;
-            color: var(--sidebar-text);
+        #logo h1 {
+            font-size: 1.25rem;
+            color: var(--accent);
+            margin-bottom: 0.25em;
         }
 
-        .identity p {
-            margin-top: 0.4em;
-            font-size: 0.75rem;
+        #logo p {
+            font-size: 0.85rem;
             color: var(--sidebar-muted);
-        }
-
-        #nav {
-            margin-top: 2.6em;
-        }
-
-        #nav ul {
-            text-align: center;
-        }
-
-        #nav ul li {
-            margin: 1.1em 0;
+            line-height: 1.4;
         }
 
         #nav ul li a {
-            font-size: 0.95rem;
             color: var(--sidebar-text);
+        }
+
+        /* =====================
+           MAIN LAYOUT
+        ===================== */
+
+        #main {
+            margin-left: 300px;
+        }
+
+        section {
+            padding: 3em 0;
         }
 
         /* =====================
@@ -106,56 +84,46 @@
         ===================== */
 
         #top {
-            background: linear-gradient(135deg, #0E2342 0%, #09182F 100%);
-            color: var(--text-light);
-            padding: 4em 0 3.4em 0 !important;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+            color: white;
             text-align: center;
+            padding: 4em 0 3em 0;
         }
 
         .hero-name {
-            font-size: 3.1rem;
+            font-size: 3rem;
+            font-weight: 700;
         }
 
         .hero-subtitle {
             font-size: 1.05rem;
-            color: #dbe4ff;
-            margin-top: 0.5em;
+            margin-top: 0.4em;
         }
 
         .hero-credentials {
             font-size: 0.9rem;
-            color: #b9c7e6;
-            margin-top: 0.4em;
+            color: #cbd6f0;
+            margin-top: 0.3em;
         }
 
-        #top .button {
-            background: var(--accent);
-            border: none;
-            font-size: 0.9rem;
-            padding: 0.75em 1.8em;
+        .hero-button {
             margin-top: 1.8em;
+            background: var(--accent);
+            color: white;
+            padding: 0.75em 1.4em;
+            border-radius: 6px;
+            display: inline-block;
+            font-size: 0.9rem;
+            text-decoration: none;
         }
 
         /* =====================
-           SECTIONS
+           EXPERIENCE
         ===================== */
 
-        #about, #experience, #projects, #contact {
+        #experience {
             background: var(--section-bg);
-            color: #111;
         }
-
-        .about-tight p {
-            max-width: 760px;
-            margin: 0 auto 1.4em auto;
-            line-height: 1.65;
-            font-size: 0.95rem;
-            text-align: center;
-        }
-
-        /* =====================
-           EXPERIENCE (COMPACT)
-        ===================== */
 
         .experience-list {
             max-width: 900px;
@@ -164,9 +132,9 @@
 
         .experience-item {
             display: grid;
-            grid-template-columns: 56px 1fr;
-            gap: 1.4em;
-            padding: 1.6em 0;
+            grid-template-columns: 72px 1fr;
+            gap: 1.2em;
+            padding: 1.1em 0;
             border-bottom: 1px solid #E5E7EB;
         }
 
@@ -175,82 +143,69 @@
         }
 
         .experience-logo img {
-            width: 48px;
-            height: 48px;
+            width: 56px;
             object-fit: contain;
         }
 
         .experience-content h3 {
             margin: 0;
             font-size: 1.05rem;
+            font-weight: 600;
         }
 
-        .experience-content .company {
-            font-size: 0.85rem;
-            color: #555;
-            margin-bottom: 0.5em;
+        .experience-content .role {
+            font-size: 0.9rem;
+            color: #444;
+            margin-bottom: 0.45em;
         }
 
         .experience-content ul {
-            margin-left: 1.1em;
+            margin: 0;
+            padding-left: 1.1em;
         }
 
         .experience-content ul li {
             font-size: 0.92rem;
-            line-height: 1.55;
-            margin-bottom: 0.35em;
+            line-height: 1.45;
+            margin-bottom: 0.25em;
         }
 
         /* =====================
            PROJECTS
         ===================== */
 
-        .project-group {
-            margin-bottom: 3em;
+        #projects {
+            background: white;
         }
 
-        .project-grid {
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.4em;
-            margin-top: 1.2em;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5em;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .project-card {
-            background: white;
-            border-radius: 14px;
+            background: #f5f7fb;
             padding: 1.4em;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-            transition: transform 0.2s ease;
-            text-decoration: none;
-            color: #111;
-        }
-
-        .project-card:hover {
-            transform: translateY(-6px);
+            border-radius: 10px;
         }
 
         .project-card h4 {
             margin-bottom: 0.4em;
-            font-size: 1rem;
-        }
-
-        .project-card p {
-            font-size: 0.9rem;
-            line-height: 1.5;
-            color: #444;
         }
 
         /* =====================
            CONTACT
         ===================== */
 
-        .contact-box {
+        #contact {
+            background: var(--section-bg);
             text-align: center;
-            padding: 3em 1em;
         }
 
-        .contact-box a {
+        #contact a {
             color: var(--accent);
             font-weight: 500;
             text-decoration: none;
@@ -260,30 +215,29 @@
 
 <body class="is-preload">
 
+<!-- SIDEBAR -->
 <div id="header">
     <div class="top">
-
         <div id="logo">
-            <div class="identity">
-                <img src="images/headshot.png" alt="Ahmed Abdulrahman headshot">
-                <h1>Ahmed Abdulrahman</h1>
-                <p>Finance • Data Analytics • CFA Level I</p>
-            </div>
+            <span class="image">
+                <img src="images/avatar.png" alt="Ahmed Abdulrahman" />
+            </span>
+            <h1>Ahmed Abdulrahman</h1>
+            <p>Finance • Data Analytics<br>CFA Level I</p>
         </div>
 
         <nav id="nav">
             <ul>
                 <li><a href="#top">Intro</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-
     </div>
 </div>
 
+<!-- MAIN -->
 <div id="main">
 
 <section id="top">
@@ -291,21 +245,7 @@
         <h1 class="hero-name">Ahmed Abdulrahman</h1>
         <p class="hero-subtitle">Portfolio Analytics • Financial Modeling • Data-Driven Investing</p>
         <p class="hero-credentials">Rotman Commerce • CFA Level I • Capital Markets</p>
-        <a href="#projects" class="button scrolly">View Projects</a>
-    </div>
-</section>
-
-<section id="about">
-    <div class="container about-tight">
-        <h2>About Me</h2>
-        <p>
-            Rotman Commerce graduate specializing in Finance, Economics, and Data Analytics with experience
-            supporting portfolio strategy, asset allocation, and investment analysis across public markets.
-        </p>
-        <p>
-            Focused on combining financial modeling with analytics and automation using Python, SQL, and BI tools.
-            CFA Level I passed; Level II candidate.
-        </p>
+        <a href="#projects" class="hero-button">View Projects</a>
     </div>
 </section>
 
@@ -316,61 +256,53 @@
         <div class="experience-list">
 
             <div class="experience-item">
-                <div class="experience-logo">
-                    <img src="images/rbc.png" alt="RBC Global Asset Management">
-                </div>
+                <div class="experience-logo"><img src="images/rbc.png"></div>
                 <div class="experience-content">
-                    <h3>Portfolio Analyst Intern</h3>
-                    <div class="company">RBC Global Asset Management</div>
+                    <h3>RBC Global Asset Management</h3>
+                    <div class="role">Portfolio Analyst Intern</div>
                     <ul>
-                        <li>Supported portfolio strategy and asset allocation analysis across public markets, contributing to insights used by senior leadership</li>
-                        <li>Built macro-driven analyses linking GDP, inflation, and central bank policy to portfolio performance and positioning</li>
-                        <li>Developed advisor-facing materials supporting client discussions and asset growth</li>
+                        <li>Supported portfolio strategy and asset allocation across public markets</li>
+                        <li>Built macro-driven analyses linking GDP, inflation, and policy to performance</li>
+                        <li>Produced advisor-facing materials supporting client asset growth</li>
                     </ul>
                 </div>
             </div>
 
             <div class="experience-item">
-                <div class="experience-logo">
-                    <img src="images/rtech.jfif" alt="RTech Solutions">
-                </div>
+                <div class="experience-logo"><img src="images/rtech.jfif"></div>
                 <div class="experience-content">
-                    <h3>Financial Analyst</h3>
-                    <div class="company">RTech Solutions</div>
+                    <h3>RTech Solutions</h3>
+                    <div class="role">Financial Analyst</div>
                     <ul>
-                        <li>Built and maintained financial models supporting budgeting, forecasting, and scenario analysis</li>
-                        <li>Analyzed financial and operational data to identify cost drivers, trends, and performance gaps</li>
-                        <li>Prepared management-ready reports translating financial results into actionable insights</li>
+                        <li>Built financial models for budgeting, forecasting, and scenario analysis</li>
+                        <li>Analyzed operational data to identify cost drivers and inefficiencies</li>
+                        <li>Prepared management-ready financial reporting</li>
                     </ul>
                 </div>
             </div>
 
             <div class="experience-item">
-                <div class="experience-logo">
-                    <img src="images/ig.png" alt="IG Wealth Management">
-                </div>
+                <div class="experience-logo"><img src="images/ig.png"></div>
                 <div class="experience-content">
-                    <h3>Commercial Banking Analyst Intern</h3>
-                    <div class="company">IG Wealth Management</div>
+                    <h3>IG Wealth Management</h3>
+                    <div class="role">Commercial Banking Analyst Intern</div>
                     <ul>
-                        <li>Supported pricing and product strategy for a large mortgage portfolio through competitor and market analysis</li>
-                        <li>Built dashboards and analytical tools enabling leadership to monitor pricing trends</li>
-                        <li>Improved internal rate exception and approval workflows to accelerate decision-making</li>
+                        <li>Supported pricing strategy for a large mortgage portfolio</li>
+                        <li>Built dashboards tracking pricing and competitive trends</li>
+                        <li>Improved approval workflows for faster decisions</li>
                     </ul>
                 </div>
             </div>
 
             <div class="experience-item">
-                <div class="experience-logo">
-                    <img src="images/bmo.jpg" alt="Bank of Montreal">
-                </div>
+                <div class="experience-logo"><img src="images/bmo.jpg"></div>
                 <div class="experience-content">
-                    <h3>Bank Teller</h3>
-                    <div class="company">Bank of Montreal (BMO)</div>
+                    <h3>Bank of Montreal (BMO)</h3>
+                    <div class="role">Bank Teller</div>
                     <ul>
-                        <li>Delivered frontline client service while handling financial transactions in a regulated environment</li>
-                        <li>Built trust with clients through accuracy, discretion, and clear communication</li>
-                        <li>Developed a strong foundation in retail banking operations and compliance</li>
+                        <li>Delivered regulated frontline banking services</li>
+                        <li>Built client trust through accuracy and discretion</li>
+                        <li>Developed strong operational and compliance foundation</li>
                     </ul>
                 </div>
             </div>
@@ -383,43 +315,21 @@
     <div class="container">
         <h2 style="text-align:center;">Projects</h2>
 
-        <div class="project-group">
-            <h3>Finance</h3>
-            <div class="project-grid">
-                <a href="#" class="project-card"><h4>Finance Project 1</h4><p>Placeholder description.</p></a>
-                <a href="#" class="project-card"><h4>Finance Project 2</h4><p>Placeholder description.</p></a>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h4>Finance Project (Placeholder)</h4>
+                <p>DCF / portfolio analytics project.</p>
+            </div>
+            <div class="project-card">
+                <h4>Data Science Project (Placeholder)</h4>
+                <p>Predictive modeling and forecasting.</p>
             </div>
         </div>
-
-        <div class="project-group">
-            <h3>Economics</h3>
-            <div class="project-grid">
-                <a href="#" class="project-card"><h4>Economics Project 1</h4><p>Placeholder description.</p></a>
-                <a href="#" class="project-card"><h4>Economics Project 2</h4><p>Placeholder description.</p></a>
-            </div>
-        </div>
-
-        <div class="project-group">
-            <h3>Data Science</h3>
-            <div class="project-grid">
-                <a href="#" class="project-card"><h4>Data Science Project 1</h4><p>Placeholder description.</p></a>
-                <a href="#" class="project-card"><h4>Data Science Project 2</h4><p>Placeholder description.</p></a>
-            </div>
-        </div>
-
-        <div class="project-group">
-            <h3>Data Analytics</h3>
-            <div class="project-grid">
-                <a href="#" class="project-card"><h4>Data Analytics Project 1</h4><p>Placeholder description.</p></a>
-                <a href="#" class="project-card"><h4>Data Analytics Project 2</h4><p>Placeholder description.</p></a>
-            </div>
-        </div>
-
     </div>
 </section>
 
 <section id="contact">
-    <div class="container contact-box">
+    <div class="container">
         <h2>Contact</h2>
         <p>
             <a href="mailto:ahmed.abdulrahman@alumni.utoronto.ca">
@@ -430,9 +340,6 @@
 </section>
 
 </div>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/main.js"></script>
 
 </body>
 </html>
