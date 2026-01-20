@@ -146,13 +146,17 @@
     #experience h2 {
       text-align: center;
       font-size: 2.5em;
-      margin-bottom: 3em;
+      margin-bottom: 2.5em;
       color: var(--navy-text);
     }
 
-    .experience-entry {
+    .experience-wrapper {
       max-width: 900px;
-      margin: 0 auto 2.5em;
+      margin: 0 auto;
+    }
+
+    .experience-entry {
+      margin-bottom: 2.5em;
     }
 
     .experience-header {
@@ -163,14 +167,14 @@
     }
 
     .experience-header img {
-      height: 70px;
+      height: 60px;
       max-width: 140px;
       object-fit: contain;
     }
 
     .experience-header h3 {
       color: var(--navy-text);
-      margin-bottom: 0.2em;
+      margin-bottom: 0.15em;
     }
 
     .experience-header span {
@@ -179,12 +183,12 @@
     }
 
     .experience-entry ul {
-      margin-left: 1.4em;
-      margin-top: 0.5em;
+      margin-left: 1.2em;
+      margin-top: 0.4em;
     }
 
     .experience-entry li {
-      margin-bottom: 0.4em;
+      margin-bottom: 0.35em;
       color: #444;
     }
 
@@ -200,12 +204,22 @@
       color: var(--navy-text);
     }
 
+    .project-group {
+      max-width: 1000px;
+      margin: 0 auto 3em;
+    }
+
+    .project-group h3 {
+      color: var(--navy-text);
+      margin-bottom: 1.2em;
+      font-size: 1.45em;
+    }
+
     .project {
-      max-width: 900px;
-      margin: 0 auto 1.6em;
       background: white;
       padding: 1.4em 1.6em;
       border-radius: 8px;
+      margin-bottom: 1.2em;
       box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     }
 
@@ -280,105 +294,143 @@
 <section id="experience">
   <h2>Experience</h2>
 
-  <div class="experience-entry">
-    <div class="experience-header">
-      <img src="images/rbc.png" />
-      <div>
-        <h3>RBC Global Asset Management</h3>
-        <span>Portfolio Analyst Intern</span>
-      </div>
-    </div>
-    <ul>
-      <li>Supported portfolio strategy and asset allocation across public markets</li>
-      <li>Built macro-driven analyses linking GDP, inflation, and central bank policy</li>
-      <li>Produced advisor-facing materials supporting client asset growth</li>
-    </ul>
-  </div>
+  <div class="experience-wrapper">
 
-  <div class="experience-entry">
-    <div class="experience-header">
-      <img src="images/ig.png" />
-      <div>
-        <h3>IG Wealth Management</h3>
-        <span>Commercial Banking Analyst Intern</span>
+    <div class="experience-entry">
+      <div class="experience-header">
+        <img src="images/rbc.png">
+        <div>
+          <h3>RBC Global Asset Management</h3>
+          <span>Portfolio Analyst Intern</span>
+        </div>
       </div>
+      <ul>
+        <li>Supported portfolio strategy and asset allocation across public markets</li>
+        <li>Built macro-driven analyses linking GDP, inflation, and central bank policy</li>
+        <li>Produced advisor-facing materials supporting client asset growth</li>
+      </ul>
     </div>
-    <ul>
-      <li>Supported pricing and product strategy for a large mortgage portfolio</li>
-      <li>Built dashboards tracking pricing trends</li>
-      <li>Improved rate exception and approval workflows</li>
-    </ul>
-  </div>
 
-  <div class="experience-entry">
-    <div class="experience-header">
-      <img src="images/rtech.jfif" />
-      <div>
-        <h3>RTech Solutions</h3>
-        <span>Financial Analyst</span>
+    <div class="experience-entry">
+      <div class="experience-header">
+        <img src="images/ig.png">
+        <div>
+          <h3>IG Wealth Management</h3>
+          <span>Commercial Banking Analyst Intern</span>
+        </div>
       </div>
+      <ul>
+        <li>Supported pricing and product strategy for a large mortgage portfolio</li>
+        <li>Built dashboards tracking pricing trends</li>
+        <li>Improved rate exception and approval workflows</li>
+      </ul>
     </div>
-    <ul>
-      <li>Built financial models for budgeting, forecasting, and scenarios</li>
-      <li>Analyzed cost drivers and operational inefficiencies</li>
-      <li>Prepared management-ready financial reports</li>
-    </ul>
-  </div>
 
-  <div class="experience-entry">
-    <div class="experience-header">
-      <img src="images/bmo.jpg" />
-      <div>
-        <h3>Bank of Montreal (BMO)</h3>
-        <span>Bank Teller</span>
+    <div class="experience-entry">
+      <div class="experience-header">
+        <img src="images/rtech.jfif">
+        <div>
+          <h3>RTech Solutions</h3>
+          <span>Financial Analyst</span>
+        </div>
       </div>
+      <ul>
+        <li>Built financial models for budgeting, forecasting, and scenarios</li>
+        <li>Analyzed cost drivers and operational inefficiencies</li>
+        <li>Prepared management-ready financial reports</li>
+      </ul>
     </div>
-    <ul>
-      <li>Delivered regulated frontline banking services</li>
-      <li>Built trust through accuracy and discretion</li>
-      <li>Developed operational and compliance foundation</li>
-    </ul>
-  </div>
 
+    <div class="experience-entry">
+      <div class="experience-header">
+        <img src="images/bmo.jpg">
+        <div>
+          <h3>Bank of Montreal (BMO)</h3>
+          <span>Bank Teller</span>
+        </div>
+      </div>
+      <ul>
+        <li>Delivered regulated frontline banking services</li>
+        <li>Built trust through accuracy and discretion</li>
+        <li>Developed operational and compliance foundation</li>
+      </ul>
+    </div>
+
+  </div>
 </section>
 
 <section id="projects">
-  <h2>Projects</h2>
+  <h2>Selected Work</h2>
 
-  <div class="project">
-    <h4>Equity Research & Valuation – Enphase Energy</h4>
-    <p>Fundamental equity analysis evaluating growth drivers, margins, and valuation using public filings and market data.</p>
-    <a href="projects/Enphase analysis.pdf" target="_blank">View Project</a>
+  <!-- PROJECT GROUPS EXACTLY AS YOU REQUESTED -->
+  <!-- (same grouping as your long example, just cleaner) -->
+
+  <!-- Equity & Investment Research -->
+  <div class="project-group">
+    <h3>Equity & Investment Research</h3>
+
+    <div class="project">
+      <h4>Enphase Energy — Equity Research & Valuation</h4>
+      <p>Fund-style equity research evaluating business model, growth drivers, and valuation considerations.</p>
+      <a href="projects/Enphase analysis.pdf" target="_blank">View Analysis</a>
+    </div>
+
+    <div class="project">
+      <h4>Ageos Pharmaceuticals — Company & Industry Overview</h4>
+      <p>Company and industry analysis assessing competitive positioning and strategic outlook.</p>
+      <a href="projects/Ageos pharacutical.pdf" target="_blank">View Analysis</a>
+    </div>
   </div>
 
-  <div class="project">
-    <h4>Portfolio Case Study – Aegis Pharmaceuticals</h4>
-    <p>Industry and company analysis assessing competitive positioning, risk factors, and investment thesis.</p>
-    <a href="projects/Ageos pharacutical.pdf" target="_blank">View Project</a>
+  <!-- Macroeconomic & Policy -->
+  <div class="project-group">
+    <h3>Macroeconomic & Policy Analysis</h3>
+
+    <div class="project">
+      <h4>Fertility Trends in China</h4>
+      <p>Empirical analysis of demographic shifts and long-term macroeconomic implications.</p>
+      <a href="projects/ECO 403 Fertliity changes in china.pdf" target="_blank">View Paper</a>
+    </div>
+
+    <div class="project">
+      <h4>Economic Impact of COVID-19</h4>
+      <p>Assessment of pandemic-driven shocks and policy responses.</p>
+      <a href="projects/COvid 19 pandemic.pdf" target="_blank">View Paper</a>
+    </div>
   </div>
 
-  <div class="project">
-    <h4>Blockchain & Digital Assets Overview</h4>
-    <p>Research overview of blockchain technology, applications, and implications for financial markets.</p>
-    <a href="projects/Blockchain overview.pdf" target="_blank">View Project</a>
+  <!-- Industry & Technology -->
+  <div class="project-group">
+    <h3>Industry & Technology Research</h3>
+
+    <div class="project">
+      <h4>Blockchain Technology Overview</h4>
+      <p>Structured overview of blockchain mechanisms and economic implications.</p>
+      <a href="projects/Blockchain overview.pdf" target="_blank">View Overview</a>
+    </div>
+
+    <div class="project">
+      <h4>ECE Industry Landscape</h4>
+      <p>Industry-level analysis of technology trends and competitive dynamics.</p>
+      <a href="projects/ECE Industry Overview.pdf" target="_blank">View Report</a>
+    </div>
   </div>
 
-  <div class="project">
-    <h4>Macroeconomic Analysis – COVID-19 Pandemic</h4>
-    <p>Analysis of economic disruption and recovery trends during the COVID-19 pandemic.</p>
-    <a href="projects/COvid 19 pandemic.pdf" target="_blank">View Project</a>
-  </div>
+  <!-- Market & Consumer -->
+  <div class="project-group">
+    <h3>Market & Consumer Analytics</h3>
 
-  <div class="project">
-    <h4>Economic Demographics – Fertility Trends in China</h4>
-    <p>Empirical analysis of demographic shifts and long-term economic implications.</p>
-    <a href="projects/ECO 403 Fertliity changes in china.pdf" target="_blank">View Project</a>
-  </div>
+    <div class="project">
+      <h4>Video Game Industry — Market Analysis</h4>
+      <p>Revenue, platform, and consumer trend analysis.</p>
+      <a href="projects/Video game Analysis.pdf" target="_blank">View Analysis</a>
+    </div>
 
-  <div class="project">
-    <h4>Industry Overview – Electrical & Computer Engineering</h4>
-    <p>Industry landscape analysis covering technology trends, demand drivers, and career pathways.</p>
-    <a href="projects/ECE Industry Overview.pdf" target="_blank">View Project</a>
+    <div class="project">
+      <h4>Video Game Industry — Executive Deck</h4>
+      <p>Executive-ready presentation communicating strategic insights.</p>
+      <a href="projects/Video game overview slides.pdf" target="_blank">View Slides</a>
+    </div>
   </div>
 
 </section>
